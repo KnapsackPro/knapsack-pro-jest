@@ -8,6 +8,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -390,7 +391,7 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 
 ### How to run tests only from specific directory?
 
-You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=TODO` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
+You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
 
 ## Development
 
