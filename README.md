@@ -1,8 +1,8 @@
-# @knapsack-pro/cypress
+# @knapsack-pro/jest
 
-[![CircleCI](https://circleci.com/gh/KnapsackPro/knapsack-pro-cypress.svg?style=svg)](https://circleci.com/gh/KnapsackPro/knapsack-pro-cypress)
+[![CircleCI](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest.svg?style=svg)](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest)
 
-`@knapsack-pro/cypress` runs your E2E tests with [Cypress.io](https://www.cypress.io) test runner and does dynamic tests allocation across parallel CI nodes using [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fcypress&utm_content=sign_up) Queue Mode to provide the fastest CI build time (optimal test suite timing).
+`@knapsack-pro/jest` runs your tests with [Jest](https://jestjs.io) test runner and does dynamic tests allocation across parallel CI nodes using [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fjest&utm_content=sign_up) Queue Mode to provide the fastest CI build time (optimal test suite timing).
 
 Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic test suite split](https://youtu.be/hUEB1XDKEFY) and learn what CI problems can be solved thanks to it.
 
@@ -45,38 +45,26 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 ## Installation
 
 ```
-$ npm install --save-dev @knapsack-pro/cypress
+$ npm install --save-dev @knapsack-pro/jest
 ```
 
 ## How to use
 
 ### Configuration steps
 
-1. To get API token just sign up at [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fcypress&utm_content=sign_up). Please add to your CI environment variables `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS`. You can generate API token in [user dashboard](https://knapsackpro.com/dashboard).
+1. To get API token just sign up at [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fjest&utm_content=sign_up). Please add to your CI environment variables `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST`. You can generate API token in [user dashboard](https://knapsackpro.com/dashboard).
 
 2. (optional) Do you want to use "retry single failed parallel CI node" feature for your CI? For instance some of CI providers like Travis CI, Buildkite or Codeship allows you to retry only one of failed parallel CI node instead of retrying the whole CI build with all parallel CI nodes. If you want to be able to retry only single failed parallel CI node then you need to tell Knapsack Pro API to remember the way how test files where allocated across parallel CI nodes by adding to your CI environment variables `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true`.
 
    The default is `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=false` which means when you want to retry the whole failed CI build then a new dynamic test suite split will happen across all retried parallel CI nodes thanks to Knapsack Pro Queue Mode. Some people may prefer to retry the whole failed CI build with test files allocated across parallel CI nodes in the same order as it happend for the failed CI build - in such case you should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true`.
 
-3. (optional) `@knapsack-pro/cypress` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/cypress` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
+3. (optional) `@knapsack-pro/jest` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/jest` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
 
    `KNAPSACK_PRO_COMMIT_HASH` - git commit hash (SHA1)
    `KNAPSACK_PRO_BRANCH` - git branch name
    `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
 
-4. (optional) If you want to keep screenshots and videos of failed tests recorded by Cypress you need to set in `cypress.json` config file [trashAssetsBeforeRuns](https://docs.cypress.io/guides/references/configuration.html#Screenshots) to `false`:
-
-   ```
-   {
-     // your default config here
-     // ...
-     "trashAssetsBeforeRuns": false
-   }
-   ```
-
-   `@knapsack-pro/cypress` runs tests using [Cypress run command](https://docs.cypress.io/guides/guides/module-api.html#cypress-run) after fetching set of tests from Knapsack Pro Queue API. When another set of tests is fetched from Queue API then we run Cypress run command again with a new set of tests and Cypress run command by default removes screenshots and videos. That's why we need to turn it off in order to preserve screenshots/videos.
-
-5. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/cypress`.
+4. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
    - [CircleCI](#circleci)
    - [Travis CI](#travis-ci)
@@ -110,8 +98,8 @@ jobs:
       - checkout
 
       - run:
-        name: Run Cypress.io tests with @knapsack-pro/cypress using Knapsack Pro Queue Mode
-        command: $(npm bin)/knapsack-pro-cypress
+        name: Run Jest tests with @knapsack-pro/jest using Knapsack Pro Queue Mode
+        command: $(npm bin)/knapsack-pro-jest
 ```
 
 Please remember to add additional parallel containers for your project in CircleCI settings.
@@ -123,7 +111,7 @@ You can parallelize your CI build across virtual machines with [travis matrix fe
 ```yaml
 # .travis.yml
 script:
-  - "$(npm bin)/knapsack-pro-cypress"
+  - "$(npm bin)/knapsack-pro-jest"
 
 env:
   global:
@@ -153,7 +141,7 @@ More info about global and matrix ENV configuration in [travis docs](https://doc
 The only thing you need to do is to configure the parallelism parameter (number of parallel agents) in your build step and run the below command in your build:
 
 ```
-$(npm bin)/knapsack-pro-cypress
+$(npm bin)/knapsack-pro-jest
 ```
 
 If you want to use Buildkite retry single agent feature to retry just failed tests on particular agent (CI node) then you should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true`.
@@ -173,17 +161,17 @@ Configure test pipelines (1/2 used)
 
 ```
 # first CI node running in parallel
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-jest
 ```
 
 Configure test pipelines (2/2 used)
 
 ```
 # second CI node running in parallel
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-jest
 ```
 
-Remember to add API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` to `Environment` page of your project settings in Codeship.
+Remember to add API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` to `Environment` page of your project settings in Codeship.
 
 If you want to use Codeship retry single CI node feature to retry just failed tests on particular CI node then you should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true`.
 
@@ -192,9 +180,9 @@ If you want to use Codeship retry single CI node feature to retry just failed te
 You can parallelize your tests on [Heroku CI](https://devcenter.heroku.com/articles/heroku-ci) by configuring `app.json` for your project.
 
 You can set how many parallel dynos with tests you want to run with `quantity` value.
-Use `test` key to run tests with `@knapsack-pro/cypress` as shown in below example.
+Use `test` key to run tests with `@knapsack-pro/jest` as shown in below example.
 
-You need to specify also the environment variable `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` with API token for Knapsack Pro.
+You need to specify also the environment variable `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` with API token for Knapsack Pro.
 For any sensitive environment variables (like Knapsack Pro API token) that you do not want commited in your `app.json` manifest, you can add them to your pipeline’s Heroku CI settings.
 
 ```
@@ -211,10 +199,10 @@ For any sensitive environment variables (like Knapsack Pro API token) that you d
         "heroku-postgresql"
       ],
       "scripts": {
-        "test": "$(npm bin)/knapsack-pro-cypress"
+        "test": "$(npm bin)/knapsack-pro-jest"
       },
       "env": {
-        "KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS": "example"
+        "KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST": "example"
       }
     }
   }
@@ -231,13 +219,13 @@ You can learn more about [Heroku CI](https://devcenter.heroku.com/articles/herok
 
 ```
 # Step for first CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-jest
 
 # Step for second CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-jest
 ```
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
 
 #### AppVeyor
 
@@ -245,24 +233,24 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as g
 
 ```
 # Step for first CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-jest
 
 # Step for second CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-jest
 ```
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
 
 #### GitLab CI
 
-Remember to add API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` to [Secret Variables](https://gitlab.com/help/ci/variables/README.md#secret-variables) in `Gitlab CI Settings -> CI/CD Pipelines -> Secret Variables`.
+Remember to add API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` to [Secret Variables](https://gitlab.com/help/ci/variables/README.md#secret-variables) in `Gitlab CI Settings -> CI/CD Pipelines -> Secret Variables`.
 
 ##### GitLab CI `>= 11.5`
 
 ```yaml
 test:
   parallel: 2
-  script: $(npm bin)/knapsack-pro-cypress
+  script: $(npm bin)/knapsack-pro-jest
 ```
 
 Here you can find info [how to configure the GitLab parallel CI nodes](https://docs.gitlab.com/ee/ci/yaml/#parallel).
@@ -284,31 +272,31 @@ test_ci_node_0:
   stage: test
   script:
     - export KNAPSACK_PRO_CI_NODE_INDEX=0
-    - $(npm bin)/knapsack-pro-cypress
+    - $(npm bin)/knapsack-pro-jest
 
 # second CI node running in parallel
 test_ci_node_1:
   stage: test
   script:
     - export KNAPSACK_PRO_CI_NODE_INDEX=1
-    - $(npm bin)/knapsack-pro-cypress
+    - $(npm bin)/knapsack-pro-jest
 ```
 
 #### SemaphoreCI.com
 
-The only thing you need to do is set up `@knapsack-pro/cypress` for as many parallel threads as you need. Here is an example:
+The only thing you need to do is set up `@knapsack-pro/jest` for as many parallel threads as you need. Here is an example:
 
 ```
 # Thread 1
-$(npm bin)/knapsack-pro-cypress
+$(npm bin)/knapsack-pro-jest
 
 # Thread 2
-$(npm bin)/knapsack-pro-cypress
+$(npm bin)/knapsack-pro-jest
 ```
 
 Tests will be split across 2 parallel threads.
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
 
 #### Cirrus-CI.org
 
@@ -320,10 +308,10 @@ task:
   matrix:
     name: CI node 0
     name: CI node 1
-  cypress_script: $(npm bin)/knapsack-pro-cypress
+  cypress_script: $(npm bin)/knapsack-pro-jest
 ```
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
 
 Here is Ruby example for [`.cirrus.yml` configuration file](https://cirrus-ci.org/examples/#ruby) that you may find useful.
 
@@ -369,7 +357,7 @@ timeout(time: 60, unit: 'MINUTES') {
 
         // example how to run tests with Knapsack Pro
         stage('Run tests') {
-          sh """${knapsack_options} $(npm bin)/knapsack-pro-cypress"""
+          sh """${knapsack_options} $(npm bin)/knapsack-pro-jest"""
         }
       }
     }
@@ -379,7 +367,7 @@ timeout(time: 60, unit: 'MINUTES') {
 }
 ```
 
-Remember to set environment variable `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` in Jenkins configuration with your API token.
+Remember to set environment variable `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` in Jenkins configuration with your API token.
 
 #### Other CI provider
 
@@ -387,13 +375,13 @@ You have to define `KNAPSACK_PRO_CI_NODE_TOTAL` and `KNAPSACK_PRO_CI_NODE_INDEX`
 
 ```
 # Step for first CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pro-jest
 
 # Step for second CI node
-KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-cypress
+KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-jest
 ```
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_CYPRESS` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
 
 ## FAQ
 
@@ -403,7 +391,7 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 
 ### How to run tests only from specific directory?
 
-You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=cypress/integration/**/*.{js,jsx,coffee,cjsx}` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
+You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=TODO` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
 
 ## Development
 
@@ -433,7 +421,7 @@ You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=cypress/integration/**/*.{js,jsx,cof
    $ npm start
    ```
 
-5. Register `@knapsack-pro/cypress` package globally in your local system. This way we will be able to develop other npm packages dependent on it:
+5. Register `@knapsack-pro/jest` package globally in your local system. This way we will be able to develop other npm packages dependent on it:
 
    ```
    $ npm link
@@ -516,7 +504,7 @@ You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=cypress/integration/**/*.{js,jsx,cof
    $ gem install github_changelog_generator
 
    # generate CHANGELOG.md
-   $ github_changelog_generator KnapsackPro/knapsack-pro-cypress
+   $ github_changelog_generator KnapsackPro/knapsack-pro-jest
    $ git commit -am "Update CHANGELOG.md"
    $ git push origin master
    ```
@@ -557,7 +545,7 @@ You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=cypress/integration/**/*.{js,jsx,cof
 9. Now when git tag is on Github you can update `CHANGELOG.md` again.
 
    ```
-   $ github_changelog_generator KnapsackPro/knapsack-pro-cypress
+   $ github_changelog_generator KnapsackPro/knapsack-pro-jest
    $ git commit -am "Update CHANGELOG.md"
    $ git push origin master
    ```
@@ -572,8 +560,8 @@ You can set `KNAPSACK_PRO_TEST_FILE_PATTERN=cypress/integration/**/*.{js,jsx,cof
 
 #### CI
 
-If your feature requires code change in [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) then please push the `@knapsack-pro/core` to GitHub first. Then you can push changes for `@knapsack-pro/cypress` to ensure the CI will use the latest `@knapsack-pro/core`.
+If your feature requires code change in [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) then please push the `@knapsack-pro/core` to GitHub first. Then you can push changes for `@knapsack-pro/jest` to ensure the CI will use the latest `@knapsack-pro/core`.
 
-#### Example Cypress test suite
+#### Example Jest test suite
 
-To test `@knapsack-pro/cypress` against real test suite we use forked [cypress-example-kitchensink](https://github.com/KnapsackPro/cypress-example-kitchensink/blob/knapsack-pro/README.knapsack-pro.md) project.
+To test `@knapsack-pro/jest` against real test suite we use [TODO](https://github.com/KnapsackPro/cypress-example-kitchensink/blob/knapsack-pro/README.knapsack-pro.md) project.
