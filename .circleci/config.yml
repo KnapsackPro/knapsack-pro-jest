@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: circleci/node:8.15
 
-    working_directory: ~/knapsack-pro-cypress
+    working_directory: ~/knapsack-pro-jest
 
     steps:
       # clone @knapsack-pro/core project
