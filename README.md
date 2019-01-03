@@ -8,7 +8,6 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 ## Table of Contents
 
 - [Installation](#installation)
@@ -38,7 +37,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
   - [Publishing](#publishing)
   - [Testing](#testing)
     - [CI](#ci)
-    - [Example Cypress test suite](#example-cypress-test-suite)
+    - [Example Jest test suite](#example-jest-test-suite)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
