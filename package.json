@@ -1,19 +1,17 @@
 {
-  "name": "@knapsack-pro/cypress",
-  "version": "1.0.1",
-  "description": "Knapsack Pro Cypress splits Cypress.io tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
+  "name": "@knapsack-pro/jest",
+  "version": "0.1.0",
+  "description": "Knapsack Pro Jest splits Jest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
   "keywords": [
     "knapsack",
     "knapsack pro",
-    "cypress",
-    "cypress.io",
+    "jest",
+    "jasmine",
     "test suite parallelisation",
     "parallelisation",
     "testing",
     "test",
     "automation",
-    "end-to-end",
-    "e2e",
     "integration",
     "runner",
     "CI"
@@ -44,13 +42,13 @@
   "homepage": "https://knapsackpro.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/KnapsackPro/knapsack-pro-cypress.git"
+    "url": "https://github.com/KnapsackPro/knapsack-pro-jest.git"
   },
   "bugs": {
-    "url": "https://github.com/KnapsackPro/knapsack-pro-cypress/issues"
+    "url": "https://github.com/KnapsackPro/knapsack-pro-jest/issues"
   },
   "bin": {
-    "knapsack-pro-cypress": "lib/knapsack-pro-cypress.js"
+    "knapsack-pro-jest": "lib/knapsack-pro-jest.js"
   },
   "dependencies": {
     "@knapsack-pro/core": "^1.0.1",
