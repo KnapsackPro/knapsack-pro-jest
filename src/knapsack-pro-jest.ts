@@ -2,7 +2,7 @@
 
 const { name: clientName, version: clientVersion } = require('../package.json');
 
-const cypress = require('cypress');
+const jest = require('jest');
 
 import {
   KnapsackProCore,
@@ -26,18 +26,29 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   const testFilePaths: string[] = queueTestFiles.map(
     (testFile: TestFile) => testFile.path,
   );
-  const { runs: tests, totalFailed } = await cypress.run({
-    spec: testFilePaths,
-  });
+  const {
+    results: { success: isTestSuiteGreen, testResults },
+  } = await jest.runCLI({ runTestsByPath: true, _: testFilePaths }, ['.']);
 
-  const recordedTestFiles: TestFile[] = tests.map((test: any) => ({
-    path: test.spec.relative,
-    time_execution: test.stats.wallClockDuration / 1000, // seconds
-  }));
+  const recordedTestFiles: TestFile[] = testResults.map(
+    ({
+      testFilePath,
+      perfStats: { start, end },
+    }: {
+      testFilePath: string;
+      perfStats: { start: number; end: number };
+    }) => ({
+      path:
+        process.platform === 'win32'
+          ? testFilePath.replace(/\\/g, '/')
+          : testFilePath,
+      time_execution: (end - start) / 1000,
+    }),
+  );
 
   return {
     recordedTestFiles,
-    isTestSuiteGreen: totalFailed === 0,
+    isTestSuiteGreen,
   };
 };
 
