@@ -564,4 +564,4 @@ If your feature requires code change in [@knapsack-pro/core](https://github.com/
 
 #### Example Jest test suite
 
-To test `@knapsack-pro/jest` against real test suite we use [TODO](https://github.com/KnapsackPro/cypress-example-kitchensink/blob/knapsack-pro/README.knapsack-pro.md) project.
+To test `@knapsack-pro/jest` against real test suite we use [jest-example-test-suite](https://github.com/KnapsackPro/jest-example-test-suite) project.
