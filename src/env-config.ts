@@ -11,12 +11,12 @@ export class EnvConfig {
       return process.env.KNAPSACK_PRO_TEST_FILE_PATTERN;
     }
 
-    // The pattern Jest uses to detect test files.
+    // The glob patterns Jest uses to detect test files.
     // By default it looks for .js and .jsx files inside of __tests__ folders,
     // as well as any files with a suffix of .test or .spec
     // (e.g. Component.test.js or Component.spec.js).
     // It will also find files called test.js or spec.js.
-    // https://jestjs.io/docs/en/22.2/configuration#testregex-string
-    return '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$';
+    // https://jestjs.io/docs/en/22.2/configuration#testmatch-array-string
+    return '{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}';
   }
 }
