@@ -15,6 +15,7 @@ import { TestFilesFinder } from './test-files-finder';
 
 EnvConfig.loadEnvironmentVariables();
 
+const projectPath = process.cwd();
 const allTestFiles: TestFile[] = TestFilesFinder.allTestFiles();
 const knapsackPro = new KnapsackProCore(
   clientName,
@@ -37,13 +38,17 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
     }: {
       testFilePath: string;
       perfStats: { start: number; end: number };
-    }) => ({
-      path:
+    }) => {
+      const path =
         process.platform === 'win32'
-          ? testFilePath.replace(/\\/g, '/')
-          : testFilePath,
-      time_execution: (end - start) / 1000,
-    }),
+          ? testFilePath.replace(`${projectPath}\\`, '').replace(/\\/g, '/')
+          : testFilePath.replace(`${projectPath}/`, '');
+
+      return {
+        path,
+        time_execution: (end - start) / 1000,
+      };
+    },
   );
 
   return {
