@@ -29,7 +29,9 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   );
   const {
     results: { success: isTestSuiteGreen, testResults },
-  } = await jest.runCLI({ runTestsByPath: true, _: testFilePaths }, ['.']);
+  } = await jest.runCLI({ runTestsByPath: true, _: testFilePaths }, [
+    projectPath,
+  ]);
 
   const recordedTestFiles: TestFile[] = testResults.map(
     ({
