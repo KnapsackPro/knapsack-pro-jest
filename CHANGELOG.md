@@ -1,5 +1,8 @@
 # Change Log
 
+## [v1.0.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.0.0) (2019-01-10)
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v0.1.0...v1.0.0)
+
 ## [v0.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v0.1.0) (2019-01-06)
 
 
