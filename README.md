@@ -393,6 +393,8 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 
 You can set `KNAPSACK_PRO_TEST_FILE_PATTERN={**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
 
+`@knapsack-pro/jest` by default rejects tests inside of `node_modules` directory. If your pattern set by `KNAPSACK_PRO_TEST_FILE_PATTERN` matches test file paths within `node_modules` then those test file paths won't be run.
+
 ## Development
 
 ### Dependencies
