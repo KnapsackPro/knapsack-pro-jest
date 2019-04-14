@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.1.0...HEAD)
+
+**Implemented enhancements:**
+
+- Reduce data transfer and speed up usage of Knapsack Pro API for Queue Mode [\#2](https://github.com/KnapsackPro/knapsack-pro-jest/pull/2) ([ArturT](https://github.com/ArturT))
+
 ## [v1.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.1.0) (2019-03-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.0.0...v1.1.0)
 
