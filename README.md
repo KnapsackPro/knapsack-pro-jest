@@ -72,9 +72,9 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 3. (optional) `@knapsack-pro/jest` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/jest` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
 
-   `KNAPSACK_PRO_COMMIT_HASH` - git commit hash (SHA1)
-   `KNAPSACK_PRO_BRANCH` - git branch name
-   `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
+   - `KNAPSACK_PRO_COMMIT_HASH` - git commit hash (SHA1)
+   - `KNAPSACK_PRO_BRANCH` - git branch name
+   - `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
 
 4. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
