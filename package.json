@@ -56,8 +56,8 @@
     "jest": "^23.6.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "@babel/register": "^7.0.0",
     "@types/glob": "^7.1.1",
     "@types/node": "^10.12.18",
