@@ -1,5 +1,17 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.2.0...HEAD)
+
+**Implemented enhancements:**
+
+- Security update Jest dependency from ^23.6 to ^24.8 [\#4](https://github.com/KnapsackPro/knapsack-pro-jest/pull/4) ([ArturT](https://github.com/ArturT))
+
+**Fixed bugs:**
+
+- Update @knapsack-pro/core 1.3.1 [\#3](https://github.com/KnapsackPro/knapsack-pro-jest/pull/3) ([ArturT](https://github.com/ArturT))
+
 ## [v1.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.2.0) (2019-04-14)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.1.0...v1.2.0)
 
