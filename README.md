@@ -79,6 +79,7 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 4. (optional) If you have test files in a non-default directory you won't be able to run tests and you may see below error.
 
    ```
+   Response body:
    { errors: [ { test_files: [ 'parameter is required' ] } ] }
    ```
 
