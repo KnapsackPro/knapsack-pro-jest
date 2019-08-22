@@ -76,7 +76,15 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
    - `KNAPSACK_PRO_BRANCH` - git branch name
    - `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
 
-4. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+4. (optional) If you have test files in non default directory you won't be able to run tests and you may see below error.
+
+   ```
+   { errors: [ { test_files: [ 'parameter is required' ] } ] }
+   ```
+
+   Please [adjust `KNAPSACK_PRO_TEST_FILE_PATTERN`](#how-to-run-tests-only-from-specific-directory) variable to match your test files directory structure in order to let Knapsack Pro detect all your test files you want to run in parallel.
+
+5. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
    - [CircleCI](#circleci)
    - [Travis CI](#travis-ci)
