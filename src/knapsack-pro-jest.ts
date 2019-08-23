@@ -6,12 +6,20 @@ const jest = require('jest');
 
 import {
   KnapsackProCore,
+  KnapsackProLogger,
   onQueueFailureType,
   onQueueSuccessType,
   TestFile,
 } from '@knapsack-pro/core';
 import { EnvConfig } from './env-config';
 import { TestFilesFinder } from './test-files-finder';
+import { JestCLI } from './jest-cli';
+
+const jestCLIOptions = JestCLI.argvToOptions();
+const knapsackProLogger = new KnapsackProLogger();
+knapsackProLogger.debug(
+  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`,
+);
 
 EnvConfig.loadEnvironmentVariables();
 
@@ -29,9 +37,14 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   );
   const {
     results: { success: isTestSuiteGreen, testResults },
-  } = await jest.runCLI({ runTestsByPath: true, _: testFilePaths }, [
-    projectPath,
-  ]);
+  } = await jest.runCLI(
+    {
+      ...jestCLIOptions,
+      runTestsByPath: true,
+      _: testFilePaths,
+    },
+    [projectPath],
+  );
 
   const recordedTestFiles: TestFile[] = testResults.map(
     ({
