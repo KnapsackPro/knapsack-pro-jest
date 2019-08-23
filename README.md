@@ -9,8 +9,6 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-## Table of Contents
-
 - [Installation](#installation)
 - [How to use](#how-to-use)
   - [Configuration steps](#configuration-steps)
@@ -34,6 +32,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 - [FAQ](#faq)
   - [Knapsack Pro Core features FAQ](#knapsack-pro-core-features-faq)
   - [How to run tests only from specific directory?](#how-to-run-tests-only-from-specific-directory)
+  - [How to pass command line options?](#how-to-pass-command-line-options)
 - [Development](#development)
   - [Dependencies](#dependencies)
   - [Setup](#setup)
@@ -465,6 +464,16 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 You can set `KNAPSACK_PRO_TEST_FILE_PATTERN={**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
 
 `@knapsack-pro/jest` by default rejects tests inside of `node_modules` directory. If your pattern set by `KNAPSACK_PRO_TEST_FILE_PATTERN` matches test file paths within `node_modules` then those test file paths won't be run.
+
+### How to pass command line options?
+
+You can pass command line options to Jest by just passing them to `@knapsack-pro/jest`. See example:
+
+```
+$(npm bin)/knapsack-pro-jest --debug
+```
+
+You can find [list of Jest CLI options here](https://jestjs.io/docs/en/cli#options).
 
 ## Development
 
