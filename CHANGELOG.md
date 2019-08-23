@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.0.0...HEAD)
+
+**Implemented enhancements:**
+
+- Update @knapsack-pro/core 1.4.0 and update docs for Semaphore 2.0 [\#5](https://github.com/KnapsackPro/knapsack-pro-jest/pull/5) ([ArturT](https://github.com/ArturT))
+
 ## [v2.0.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.0.0) (2019-07-06)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.2.0...v2.0.0)
 
