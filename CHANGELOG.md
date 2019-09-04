@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.0...HEAD)
+
+**Fixed bugs:**
+
+- Update @knapsack-pro/core 1.4.1 [\#7](https://github.com/KnapsackPro/knapsack-pro-jest/pull/7) ([ArturT](https://github.com/ArturT))
+
 ## [v2.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.1.0...v2.2.0)
 
