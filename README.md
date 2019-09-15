@@ -444,7 +444,7 @@ Remember to set environment variable `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` in Jen
 
 `@knapsack-pro/jest` supports environment variables provided by GitHub Actions to run your tests. You have to define a few things in `.github/workflows/main.yaml` config file.
 
-- You need to set `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST`. See [creating and using secrets in GitHub Actions](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables).
+- You need to set `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` environment variable in GitHub repository Settings -> Secrets. See [creating and using secrets in GitHub Actions](https://help.github.com/en/articles/virtual-environments-for-github-actions#creating-and-using-secrets-encrypted-variables).
 - You should create as many parallel jobs as you need with `matrix.ci_node_total` and `matrix.ci_node_index` properties. If your test suite is slow you should use more parallel jobs.
 
 Below you can find config for GitHub Actions.
