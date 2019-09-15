@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.1...HEAD)
+
+**Implemented enhancements:**
+
+- Update @knapsack-pro/core 1.5.0 to add support for GitHub Actions [\#8](https://github.com/KnapsackPro/knapsack-pro-jest/pull/8) ([ArturT](https://github.com/ArturT))
+
 ## [v2.2.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.1) (2019-09-04)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.0...v2.2.1)
 
