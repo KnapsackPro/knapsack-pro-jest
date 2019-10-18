@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.3.0...HEAD)
+
+**Implemented enhancements:**
+
+- Add support for Codefresh.io CI provider [\#9](https://github.com/KnapsackPro/knapsack-pro-jest/pull/9) ([ArturT](https://github.com/ArturT))
+
 ## [v2.3.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.3.0) (2019-09-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.1...v2.3.0)
 
