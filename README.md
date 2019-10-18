@@ -338,7 +338,7 @@ Below you can find example part of Semaphore CI 2.0 config.
 
 ```yaml
 blocks:
-  - name: Cypress tests
+  - name: Jest tests
     task:
       env_vars:
         - name: KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST
