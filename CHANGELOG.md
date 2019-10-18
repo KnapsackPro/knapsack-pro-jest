@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
-
-[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.3.0...HEAD)
+## [v2.4.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.4.0) (2019-10-18)
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.3.0...v2.4.0)
 
 **Implemented enhancements:**
 
@@ -25,10 +24,6 @@
 ## [v2.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.1.0...v2.2.0)
 
-**Implemented enhancements:**
-
-- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
-
 ## [v2.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.1.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.0.0...v2.1.0)
 
@@ -41,6 +36,7 @@
 
 **Implemented enhancements:**
 
+- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 - Security update Jest dependency from ^23.6 to ^24.8 [\#4](https://github.com/KnapsackPro/knapsack-pro-jest/pull/4) ([ArturT](https://github.com/ArturT))
 
 **Fixed bugs:**
