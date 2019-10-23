@@ -19,4 +19,8 @@ export class EnvConfig {
     // https://jestjs.io/docs/en/22.2/configuration#testmatch-array-string
     return '{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}';
   }
+
+  public static get testFileIgnorePattern(): string {
+    return process.env.KNAPSACK_PRO_TEST_FILE_IGNORE_PATTERN || '**/*';
+  }
 }
