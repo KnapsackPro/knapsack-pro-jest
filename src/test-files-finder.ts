@@ -9,7 +9,12 @@ export class TestFilesFinder {
     return glob
       .sync(EnvConfig.testFilePattern)
       .filter((testFilePath: string) => {
-        return !minimatch(testFilePath, EnvConfig.testFileIgnorePattern, { matchBase: true });
+        if (EnvConfig.testFileIgnorePattern) {
+          return !minimatch(testFilePath, EnvConfig.testFileIgnorePattern, {
+            matchBase: true,
+          });
+        }
+        return true;
       })
       .filter((testFilePath: string) => {
         // ignore test file paths inside node_modules because it's default Jest behavior
