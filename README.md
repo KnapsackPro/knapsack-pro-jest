@@ -34,6 +34,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 - [FAQ](#faq)
   - [Knapsack Pro Core features FAQ](#knapsack-pro-core-features-faq)
   - [How to run tests only from specific directory?](#how-to-run-tests-only-from-specific-directory)
+  - [How to exclude tests to ignore them from running?](#how-to-exclude-tests-to-ignore-them-from-running)
   - [How to pass command line options?](#how-to-pass-command-line-options)
 - [Development](#development)
   - [Dependencies](#dependencies)
@@ -598,9 +599,11 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 
 You can set `KNAPSACK_PRO_TEST_FILE_PATTERN="{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}"` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
 
-You can also set `KNAPSACK_PRO_TEST_FILE_IGNORE_PATTERN=**/*` which additionally will define a glob pattern to ignore tests similar to jest `testPathIgnorePattern` parameter.
-
 `@knapsack-pro/jest` by default rejects tests inside of `node_modules` directory. If your pattern set by `KNAPSACK_PRO_TEST_FILE_PATTERN` matches test file paths within `node_modules` then those test file paths won't be run.
+
+### How to exclude tests to ignore them from running?
+
+You can set `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` which define a [glob](https://github.com/isaacs/node-glob) pattern to exclude tests similar to Jest [`testPathIgnorePatterns`](https://jestjs.io/docs/en/configuration.html#testpathignorepatterns-array-string) parameter. Note `testPathIgnorePatterns` uses regexp pattern while `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` uses [glob](https://github.com/isaacs/node-glob) pattern.
 
 ### How to pass command line options?
 

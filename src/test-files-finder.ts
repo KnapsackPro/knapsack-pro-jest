@@ -9,8 +9,8 @@ export class TestFilesFinder {
     return glob
       .sync(EnvConfig.testFilePattern)
       .filter((testFilePath: string) => {
-        if (EnvConfig.testFileIgnorePattern) {
-          return !minimatch(testFilePath, EnvConfig.testFileIgnorePattern, {
+        if (EnvConfig.testFileExcludePattern) {
+          return !minimatch(testFilePath, EnvConfig.testFileExcludePattern, {
             matchBase: true,
           });
         }

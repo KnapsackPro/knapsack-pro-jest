@@ -20,7 +20,7 @@ export class EnvConfig {
     return '{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}';
   }
 
-  public static get testFileIgnorePattern(): void | string {
-    return process.env.KNAPSACK_PRO_TEST_FILE_IGNORE_PATTERN;
+  public static get testFileExcludePattern(): void | string {
+    return process.env.KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN;
   }
 }
