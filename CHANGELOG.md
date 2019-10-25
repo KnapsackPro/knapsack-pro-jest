@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
-
-[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.4.0...HEAD)
+## [v2.5.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.5.0) (2019-10-25)
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.4.0...v2.5.0)
 
 **Implemented enhancements:**
 
@@ -49,7 +48,6 @@
 **Implemented enhancements:**
 
 - Security update Jest dependency from ^23.6 to ^24.8 [\#4](https://github.com/KnapsackPro/knapsack-pro-jest/pull/4) ([ArturT](https://github.com/ArturT))
-- Add support for Semaphore CI 2.0 [\#1](https://github.com/KnapsackPro/knapsack-pro-jest/pull/1) ([ArturT](https://github.com/ArturT))
 
 **Fixed bugs:**
 
@@ -64,6 +62,10 @@
 
 ## [v1.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.1.0) (2019-03-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.0.0...v1.1.0)
+
+**Implemented enhancements:**
+
+- Add support for Semaphore CI 2.0 [\#1](https://github.com/KnapsackPro/knapsack-pro-jest/pull/1) ([ArturT](https://github.com/ArturT))
 
 ## [v1.0.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.0.0) (2019-01-10)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v0.1.0...v1.0.0)
