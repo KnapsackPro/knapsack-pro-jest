@@ -1,4 +1,5 @@
 import glob = require('glob');
+import minimatch = require('minimatch');
 
 import { TestFile } from '@knapsack-pro/core';
 import { EnvConfig } from './env-config';
@@ -8,7 +9,10 @@ export class TestFilesFinder {
     return glob
       .sync(EnvConfig.testFilePattern)
       .filter((testFilePath: string) => {
-        // ignore test file paths inside node_modules because it's default Jest behaviour
+        return !minimatch(testFilePath, EnvConfig.testFileIgnorePattern, { matchBase: true });
+      })
+      .filter((testFilePath: string) => {
+        // ignore test file paths inside node_modules because it's default Jest behavior
         // https://jestjs.io/docs/en/22.2/configuration#testpathignorepatterns-array-string
         return !testFilePath.match(/node_modules/);
       })
