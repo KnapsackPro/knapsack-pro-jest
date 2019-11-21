@@ -601,6 +601,10 @@ You can set `KNAPSACK_PRO_TEST_FILE_PATTERN="{**/__tests__/**/*.js?(x),**/?(*.)(
 
 `@knapsack-pro/jest` by default rejects tests inside of `node_modules` directory. If your pattern set by `KNAPSACK_PRO_TEST_FILE_PATTERN` matches test file paths within `node_modules` then those test file paths won't be run.
 
+If you want to use a few patterns you can do it as shown above `KNAPSACK_PRO_TEST_FILE_PATTERN={pattern_1,pattern_2}`.
+
+If you want to use single pattern then you can do `KNAPSACK_PRO_TEST_FILE_PATTERN="__tests__/**/*.test.js"`.
+
 ### How to exclude tests to ignore them from running?
 
 You can set `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` which define a [glob](https://github.com/isaacs/node-glob) pattern to exclude tests similar to Jest [`testPathIgnorePatterns`](https://jestjs.io/docs/en/configuration.html#testpathignorepatterns-array-string) parameter. Note `testPathIgnorePatterns` uses regexp pattern while `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` uses [glob](https://github.com/isaacs/node-glob) pattern.
