@@ -14,17 +14,19 @@
 **Implemented enhancements:**
 
 - Add separate parameter for ignored file pattern [\#10](https://github.com/KnapsackPro/knapsack-pro-jest/pull/10) ([andrcuns](https://github.com/andrcuns))
-- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 
 ## [v2.4.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.4.0) (2019-10-18)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.3.0...v2.4.0)
+
+**Implemented enhancements:**
+
+- Add support for Codefresh.io CI provider [\#9](https://github.com/KnapsackPro/knapsack-pro-jest/pull/9) ([ArturT](https://github.com/ArturT))
 
 ## [v2.3.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.3.0) (2019-09-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.1...v2.3.0)
 
 **Implemented enhancements:**
 
-- Add support for Codefresh.io CI provider [\#9](https://github.com/KnapsackPro/knapsack-pro-jest/pull/9) ([ArturT](https://github.com/ArturT))
 - Update @knapsack-pro/core 1.5.0 to add support for GitHub Actions [\#8](https://github.com/KnapsackPro/knapsack-pro-jest/pull/8) ([ArturT](https://github.com/ArturT))
 
 ## [v2.2.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.1) (2019-09-04)
@@ -36,6 +38,10 @@
 
 ## [v2.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.1.0...v2.2.0)
+
+**Implemented enhancements:**
+
+- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 
 ## [v2.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.1.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.0.0...v2.1.0)
@@ -51,16 +57,16 @@
 
 - Security update Jest dependency from ^23.6 to ^24.8 [\#4](https://github.com/KnapsackPro/knapsack-pro-jest/pull/4) ([ArturT](https://github.com/ArturT))
 
-**Fixed bugs:**
-
-- Update @knapsack-pro/core 1.3.1 [\#3](https://github.com/KnapsackPro/knapsack-pro-jest/pull/3) ([ArturT](https://github.com/ArturT))
-
 ## [v1.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.2.0) (2019-04-14)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.1.0...v1.2.0)
 
 **Implemented enhancements:**
 
 - Reduce data transfer and speed up usage of Knapsack Pro API for Queue Mode [\#2](https://github.com/KnapsackPro/knapsack-pro-jest/pull/2) ([ArturT](https://github.com/ArturT))
+
+**Fixed bugs:**
+
+- Update @knapsack-pro/core 1.3.1 [\#3](https://github.com/KnapsackPro/knapsack-pro-jest/pull/3) ([ArturT](https://github.com/ArturT))
 
 ## [v1.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v1.1.0) (2019-03-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v1.0.0...v1.1.0)
