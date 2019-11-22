@@ -1,24 +1,30 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.5.0...HEAD)
+
+**Implemented enhancements:**
+
+- Run tests only when they are detected on the disk. Do not run tests when the test file pattern is invalid. Require to set KNAPSACK\_PRO\_TEST\_FILE\_PATTERN [\#11](https://github.com/KnapsackPro/knapsack-pro-jest/pull/11) ([ArturT](https://github.com/ArturT))
+
 ## [v2.5.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.5.0) (2019-10-25)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.4.0...v2.5.0)
 
 **Implemented enhancements:**
 
 - Add separate parameter for ignored file pattern [\#10](https://github.com/KnapsackPro/knapsack-pro-jest/pull/10) ([andrcuns](https://github.com/andrcuns))
+- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 
 ## [v2.4.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.4.0) (2019-10-18)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.3.0...v2.4.0)
-
-**Implemented enhancements:**
-
-- Add support for Codefresh.io CI provider [\#9](https://github.com/KnapsackPro/knapsack-pro-jest/pull/9) ([ArturT](https://github.com/ArturT))
 
 ## [v2.3.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.3.0) (2019-09-15)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.2.1...v2.3.0)
 
 **Implemented enhancements:**
 
+- Add support for Codefresh.io CI provider [\#9](https://github.com/KnapsackPro/knapsack-pro-jest/pull/9) ([ArturT](https://github.com/ArturT))
 - Update @knapsack-pro/core 1.5.0 to add support for GitHub Actions [\#8](https://github.com/KnapsackPro/knapsack-pro-jest/pull/8) ([ArturT](https://github.com/ArturT))
 
 ## [v2.2.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.1) (2019-09-04)
@@ -30,10 +36,6 @@
 
 ## [v2.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.2.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.1.0...v2.2.0)
-
-**Implemented enhancements:**
-
-- Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 
 ## [v2.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.1.0) (2019-08-23)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.0.0...v2.1.0)
