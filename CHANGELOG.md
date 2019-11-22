@@ -3,6 +3,10 @@
 ## [v2.6.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.6.0) (2019-11-22)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.5.0...v2.6.0)
 
+**Implemented enhancements:**
+
+- Run tests only when they are detected on the disk. Do not run tests when the test file pattern is invalid. Require to set KNAPSACK\_PRO\_TEST\_FILE\_PATTERN [\#11](https://github.com/KnapsackPro/knapsack-pro-jest/pull/11) ([ArturT](https://github.com/ArturT))
+
 ## [v2.5.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.5.0) (2019-10-25)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.4.0...v2.5.0)
 
@@ -36,7 +40,6 @@
 
 **Implemented enhancements:**
 
-- Run tests only when they are detected on the disk. Do not run tests when the test file pattern is invalid. Require to set KNAPSACK\_PRO\_TEST\_FILE\_PATTERN [\#11](https://github.com/KnapsackPro/knapsack-pro-jest/pull/11) ([ArturT](https://github.com/ArturT))
 - Add support for Jest CLI options [\#6](https://github.com/KnapsackPro/knapsack-pro-jest/pull/6) ([ArturT](https://github.com/ArturT))
 
 ## [v2.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.1.0) (2019-08-23)
