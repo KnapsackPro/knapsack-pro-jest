@@ -593,7 +593,7 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as glob
 
 ## FAQ
 
-__NEW:__ Up to date [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
+:heavy_exclamation_mark: __NEW:__ Up to date [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
 
 __OLD:__ This README also contains FAQ questions but we keep adding new info only to our new FAQ page mentioned above.
 
