@@ -91,9 +91,11 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 5. If you want to use [Jest config file with `@knapsack-pro/jest`](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
 
-6. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
+6. If you use `--coverage` flag for Jest to generate code coverage then to make it work please check [how to generate code coverage for Jest with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-code-coverage-for-jest-with-knapsack-pro-jest-in-queue-mode)?
 
-7. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+7. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
+
+8. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
    - [CircleCI](#circleci)
    - [Travis CI](#travis-ci)

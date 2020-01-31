@@ -3,6 +3,7 @@
 const { name: clientName, version: clientVersion } = require('../package.json');
 
 const jest = require('jest');
+const uuidv1 = require('uuid/v1');
 
 import {
   KnapsackProCore,
@@ -35,11 +36,19 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   const testFilePaths: string[] = queueTestFiles.map(
     (testFile: TestFile) => testFile.path,
   );
+
+  const jestCLICoverage = EnvConfig.coverageDirectory
+    ? {
+      coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv1()}`,
+    }
+    : {};
+
   const {
     results: { success: isTestSuiteGreen, testResults },
   } = await jest.runCLI(
     {
       ...jestCLIOptions,
+      ...jestCLICoverage,
       runTestsByPath: true,
       _: testFilePaths,
     },
