@@ -80,14 +80,16 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
    - `KNAPSACK_PRO_BRANCH` - git branch name
    - `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
 
-4. (optional) If you have test files in a non-default directory you won't be able to run tests and you may see below error.
+4. If you have test files in a non-default directory or you specify test files to run in Jest config file then you won't be able to run tests and you may see below error.
 
    ```
    Response body:
    { errors: [ { test_files: [ 'parameter is required' ] } ] }
    ```
 
-   Please [adjust `KNAPSACK_PRO_TEST_FILE_PATTERN`](#how-to-run-tests-only-from-specific-directory) variable to match your test files directory structure to let Knapsack Pro detect all the test files you want to run in parallel.
+   Please [adjust `KNAPSACK_PRO_TEST_FILE_PATTERN`](https://knapsackpro.com/faq/question/how-to-run-tests-only-from-specific-directory-in-jest) variable to match your test files directory structure to let Knapsack Pro detect all the test files you want to run in parallel. You can also exclude test files with [`KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN`](https://knapsackpro.com/faq/question/how-to-exclude-tests-to-ignore-them-from-running-in-jest).
+
+   If you want to use [Jest config file with Knapsack Pro for Jest](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
 
 5. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
@@ -593,9 +595,9 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as glob
 
 ## FAQ
 
-:heavy_exclamation_mark: __NEW:__ Up to date [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
+:heavy_exclamation_mark: **NEW:** Up to date [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
 
-__OLD:__ This README also contains FAQ questions but we keep adding new info only to our new FAQ page mentioned above.
+**OLD:** This README also contains FAQ questions but we keep adding new info only to our new FAQ page mentioned above.
 
 We keep this old FAQ in README to not break old links spread across the web.
 
