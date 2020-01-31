@@ -3,6 +3,7 @@
 const { name: clientName, version: clientVersion } = require('../package.json');
 
 const jest = require('jest');
+const uuidv1 = require('uuid/v1');
 
 import {
   KnapsackProCore,
@@ -39,8 +40,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   let jestCLICoverage = {};
   if (EnvConfig.coverageDirectory) {
     jestCLICoverage = {
-      // TODO add UUID to the path name
-      coverageDirectory: EnvConfig.coverageDirectory,
+      coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv1()}`,
     };
   }
 
