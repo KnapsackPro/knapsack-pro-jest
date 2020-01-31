@@ -89,9 +89,11 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
    Please [adjust `KNAPSACK_PRO_TEST_FILE_PATTERN`](https://knapsackpro.com/faq/question/how-to-run-tests-only-from-specific-directory-in-jest) variable to match your test files directory structure to let Knapsack Pro detect all the test files you want to run in parallel. You can also exclude test files with [`KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN`](https://knapsackpro.com/faq/question/how-to-exclude-tests-to-ignore-them-from-running-in-jest).
 
-   If you want to use [Jest config file with Knapsack Pro for Jest](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
+5. If you want to use [Jest config file with `@knapsack-pro/jest`](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
 
-5. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+6. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
+
+7. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
    - [CircleCI](#circleci)
    - [Travis CI](#travis-ci)
