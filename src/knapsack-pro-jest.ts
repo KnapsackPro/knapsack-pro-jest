@@ -37,12 +37,11 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
     (testFile: TestFile) => testFile.path,
   );
 
-  let jestCLICoverage = {};
-  if (EnvConfig.coverageDirectory) {
-    jestCLICoverage = {
+  const jestCLICoverage = EnvConfig.coverageDirectory
+    ? {
       coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv1()}`,
-    };
-  }
+    }
+    : {};
 
   const {
     results: { success: isTestSuiteGreen, testResults },
