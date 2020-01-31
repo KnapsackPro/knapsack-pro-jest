@@ -1,8 +1,7 @@
 # Change Log
 
-## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
-
-[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.6.0...HEAD)
+## [v2.7.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.7.0) (2020-01-31)
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.6.0...v2.7.0)
 
 **Implemented enhancements:**
 
