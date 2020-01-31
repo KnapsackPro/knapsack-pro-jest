@@ -1,5 +1,13 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.6.0...HEAD)
+
+**Implemented enhancements:**
+
+- Add KNAPSACK\_PRO\_COVERAGE\_DIRECTORY to generate unique directory name with code coverage reports for each batch of tests fetched from Queue [\#13](https://github.com/KnapsackPro/knapsack-pro-jest/pull/13) ([ArturT](https://github.com/ArturT))
+
 ## [v2.6.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.6.0) (2019-11-22)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.5.0...v2.6.0)
 
