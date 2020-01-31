@@ -35,11 +35,21 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   const testFilePaths: string[] = queueTestFiles.map(
     (testFile: TestFile) => testFile.path,
   );
+
+  let jestCLICoverage = {};
+  if (EnvConfig.coverageDirectory) {
+    jestCLICoverage = {
+      // TODO add UUID to the path name
+      coverageDirectory: EnvConfig.coverageDirectory,
+    };
+  }
+
   const {
     results: { success: isTestSuiteGreen, testResults },
   } = await jest.runCLI(
     {
       ...jestCLIOptions,
+      ...jestCLICoverage,
       runTestsByPath: true,
       _: testFilePaths,
     },
