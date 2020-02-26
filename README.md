@@ -74,13 +74,24 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
    The default is `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=false` which means when you want to retry the whole failed CI build then a new dynamic test suite split will happen across all retried parallel CI nodes thanks to Knapsack Pro Queue Mode. Some people may prefer to retry the whole failed CI build with test files allocated across parallel CI nodes in the same order as it happend for the failed CI build - in such case you should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true`.
 
-3. (optional) `@knapsack-pro/jest` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/jest` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
+3. (optional) If one of the parallel CI nodes starts work very late after other parallel CI nodes already finished work.
+
+   Some of CI providers have a problem with starting parallel CI nodes as soon as possible. For instance, you have a fixed pool of parallel CI nodes shared with many CI builds and sometimes CI build has started work even the pool has not enough available parallel CI nodes at the moment. Another case is when the CI provider infrastructure is overloaded which can lead to some parallel CI nodes starting work later than others. 
+
+   Do you have the CI server that does not start all parallel CI nodes at the same time and one of your parallel CI nodes will start work very late after all other parallel CI nodes already finished consuming tests from the Knapsack Pro Queue? In such a case, if you would use default `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=false` then the very late CI node would start running all tests again based on a new Queue which means you would run test suite twice. This problem can happen if your test suite is very small and differences in the start time of parallel CI nodes are very big.
+
+   You should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true` to ensure the very late parallel CI node won't run tests again if the Queue was already consumed. The downside of this is that you won't be able to run 2nd CI build for the same set of values git commit/branch/ci node total number with a dynamic test suite split way if your CI provider does not expose unique CI build ID.  Instead, the tests will be run assigned to the same parallel CI node indexes with the same order as it was recorded for the first time.
+
+   Knapsack Pro tries to detect CI build ID from the environment variables of your CI provider. If your CI provider does not expose a unique CI build ID. Knapsack Pro tries to detect CI build ID from the environment variables of your CI provider.
+   Here you can check if your CI provider exposes CI build ID, see function [`ciNodeBuildId`](https://github.com/KnapsackPro/knapsack-pro-core-js/blob/master/src/ci-providers/github-actions.ts#L13) (example for Github Actions). If you CI provider won't provide CI build ID you can set `KNAPSACK_PRO_CI_NODE_BUILD_ID` (see next point).
+
+4. (optional) `@knapsack-pro/jest` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/jest` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
 
    - `KNAPSACK_PRO_COMMIT_HASH` - git commit hash (SHA1)
    - `KNAPSACK_PRO_BRANCH` - git branch name
    - `KNAPSACK_PRO_CI_NODE_BUILD_ID` - a unique ID for your CI build. All parallel CI nodes being part of single CI build must have the same node build ID. Example how to generate node build ID: `KNAPSACK_PRO_CI_NODE_BUILD_ID=$(openssl rand - base64 32)`.
 
-4. If you have test files in a non-default directory or you specify test files to run in Jest config file then you won't be able to run tests and you may see below error.
+5. If you have test files in a non-default directory or you specify test files to run in Jest config file then you won't be able to run tests and you may see below error.
 
    ```
    Response body:
@@ -89,13 +100,13 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
    Please [adjust `KNAPSACK_PRO_TEST_FILE_PATTERN`](https://knapsackpro.com/faq/question/how-to-run-tests-only-from-specific-directory-in-jest) variable to match your test files directory structure to let Knapsack Pro detect all the test files you want to run in parallel. You can also exclude test files with [`KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN`](https://knapsackpro.com/faq/question/how-to-exclude-tests-to-ignore-them-from-running-in-jest).
 
-5. If you want to use [Jest config file with `@knapsack-pro/jest`](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
+6. If you want to use [Jest config file with `@knapsack-pro/jest`](https://knapsackpro.com/faq/question/how-to-use-jest-config-file-with-knapsack-pro-jest) check this tip.
 
-6. If you use `--coverage` flag for Jest to generate code coverage then to make it work please check [how to generate code coverage for Jest with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-code-coverage-for-jest-with-knapsack-pro-jest-in-queue-mode)?
+7. If you use `--coverage` flag for Jest to generate code coverage then to make it work please check [how to generate code coverage for Jest with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-code-coverage-for-jest-with-knapsack-pro-jest-in-queue-mode)?
 
-7. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
+8. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
 
-8. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+9. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
    - [CircleCI](#circleci)
    - [Travis CI](#travis-ci)
