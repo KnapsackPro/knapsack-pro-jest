@@ -637,6 +637,8 @@ You can set `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` which define a [glob](https
 
 ### How to pass command line options?
 
+__UP TO DATE ANSWER:__ https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
+
 You can pass command line options to Jest by just passing them to `@knapsack-pro/jest`. See example:
 
 ```
