@@ -513,6 +513,9 @@ jobs:
           KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST: ${{ secrets.KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST }}
           KNAPSACK_PRO_CI_NODE_TOTAL: ${{ matrix.ci_node_total }}
           KNAPSACK_PRO_CI_NODE_INDEX: ${{ matrix.ci_node_index }}
+          # allows rerun parallel jobs with the same set of tests
+          # that were consumed from Queue in the very first CI build run
+          KNAPSACK_PRO_FIXED_QUEUE_SPLIT: true
         run: |
           $(npm bin)/knapsack-pro-jest
 ```
