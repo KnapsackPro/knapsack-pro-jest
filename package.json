@@ -1,6 +1,6 @@
 {
   "name": "@knapsack-pro/jest",
-  "version": "2.7.0",
+  "version": "3.0.0",
   "description": "Knapsack Pro Jest splits Jest tests across CI nodes and makes sure that tests will run in optimal time on each CI node.",
   "keywords": [
     "knapsack",
