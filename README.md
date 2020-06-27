@@ -76,13 +76,13 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 3. (optional) If one of the parallel CI nodes starts work very late after other parallel CI nodes already finished work.
 
-   Some of CI providers have a problem with starting parallel CI nodes as soon as possible. For instance, you have a fixed pool of parallel CI nodes shared with many CI builds and sometimes CI build has started work even the pool has not enough available parallel CI nodes at the moment. Another case is when the CI provider infrastructure is overloaded which can lead to some parallel CI nodes starting work later than others. 
+   Some of CI providers have a problem with starting parallel CI nodes as soon as possible. For instance, you have a fixed pool of parallel CI nodes shared with many CI builds and sometimes CI build has started work even the pool has not enough available parallel CI nodes at the moment. Another case is when the CI provider infrastructure is overloaded which can lead to some parallel CI nodes starting work later than others.
 
    Do you have the CI server that does not start all parallel CI nodes at the same time and one of your parallel CI nodes will start work very late after all other parallel CI nodes already finished consuming tests from the Knapsack Pro Queue? In such a case, if you would use default `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=false` then the very late CI node would start running all tests again based on a new Queue which means you would run test suite twice. This problem can happen if your test suite is very small and differences in the start time of parallel CI nodes are very big.
 
-   You should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true` to ensure the very late parallel CI node won't run tests again if the Queue was already consumed. The downside of this is that you won't be able to run 2nd CI build for the same set of values git commit/branch/ci node total number with a dynamic test suite split way if your CI provider does not expose unique CI build ID.  Instead, the tests will be run assigned to the same parallel CI node indexes with the same order as it was recorded for the first time.
+   You should set `KNAPSACK_PRO_FIXED_QUEUE_SPLIT=true` to ensure the very late parallel CI node won't run tests again if the Queue was already consumed. The downside of this is that you won't be able to run 2nd CI build for the same set of values git commit/branch/ci node total number with a dynamic test suite split way if your CI provider does not expose unique CI build ID. Instead, the tests will be run assigned to the same parallel CI node indexes with the same order as it was recorded for the first time.
 
-   Knapsack Pro tries to detect CI build ID from the environment variables of your CI provider. Here you can check if your CI provider exposes CI build ID, see function [`ciNodeBuildId`](https://github.com/KnapsackPro/knapsack-pro-core-js/blob/master/src/ci-providers/github-actions.ts#L13) (example for Github Actions). If you CI provider won't provide CI build ID you can set `KNAPSACK_PRO_CI_NODE_BUILD_ID` (see next point).
+   Knapsack Pro tries to detect CI build ID from the environment variables of your CI provider. Here you can check if your CI provider exposes CI build ID, see function [`ciNodeBuildId`](https://github.com/KnapsackPro/knapsack-pro-core-js/blob/master/src/ci-providers/github-actions.ts#L14) (example for Github Actions). If you CI provider won't provide CI build ID you can set `KNAPSACK_PRO_CI_NODE_BUILD_ID` (see next point).
 
 4. (optional) `@knapsack-pro/jest` detects information about CI build from supported CI environment variables. When information like git branch name and git commit hash cannot be detect from CI environment variables then `@knapsack-pro/jest` will try to use git installed on CI machine to detect the infomation. If you don't have git installed then you should set the information using environment variables:
 
@@ -640,7 +640,7 @@ You can set `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` which define a [glob](https
 
 ### How to pass command line options?
 
-__UP TO DATE ANSWER:__ https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
+**UP TO DATE ANSWER:** https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
 
 You can pass command line options to Jest by just passing them to `@knapsack-pro/jest`. See example:
 
