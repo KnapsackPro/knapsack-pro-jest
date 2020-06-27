@@ -1,5 +1,21 @@
 # Change Log
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.7.0...HEAD)
+
+**Implemented enhancements:**
+
+- \[breaking change\] Update to @knapsack-pro/core 2.0.0 - read PR description how to migrate for Github Actions [\#15](https://github.com/KnapsackPro/knapsack-pro-jest/pull/15) ([ArturT](https://github.com/ArturT))
+
+**Closed issues:**
+
+- Saving coverage data [\#12](https://github.com/KnapsackPro/knapsack-pro-jest/issues/12)
+
+**Merged pull requests:**
+
+- Bump minimist from 1.2.0 to 1.2.3 [\#14](https://github.com/KnapsackPro/knapsack-pro-jest/pull/14) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v2.7.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v2.7.0) (2020-01-31)
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v2.6.0...v2.7.0)
 
