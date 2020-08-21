@@ -767,7 +767,7 @@ You can find [list of Jest CLI options here](https://jestjs.io/docs/en/cli#optio
    $ gem install github_changelog_generator
 
    # generate CHANGELOG.md
-   $ github_changelog_generator KnapsackPro/knapsack-pro-jest
+   $ github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
    $ git commit -am "Update CHANGELOG.md"
    $ git push origin master
    ```
@@ -808,7 +808,7 @@ You can find [list of Jest CLI options here](https://jestjs.io/docs/en/cli#optio
 9. Now when git tag is on Github you can update `CHANGELOG.md` again.
 
    ```
-   $ github_changelog_generator KnapsackPro/knapsack-pro-jest
+   $ github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
    $ git commit -am "Update CHANGELOG.md"
    $ git push origin master
    ```
