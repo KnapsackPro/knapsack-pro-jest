@@ -8,6 +8,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## Table of Contents
 
 - [Installation](#installation)
 - [How to use](#how-to-use)
@@ -37,6 +38,7 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
   - [How to exclude tests to ignore them from running?](#how-to-exclude-tests-to-ignore-them-from-running)
   - [How to pass command line options?](#how-to-pass-command-line-options)
 - [Development](#development)
+  - [Requirements](#requirements)
   - [Dependencies](#dependencies)
   - [Setup](#setup)
   - [Publishing](#publishing)
@@ -651,6 +653,12 @@ $(npm bin)/knapsack-pro-jest --debug
 You can find [list of Jest CLI options here](https://jestjs.io/docs/en/cli#options).
 
 ## Development
+
+### Requirements
+
+You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in development.
+
+- `>= Node 12.18.3 LTS`
 
 ### Dependencies
 
