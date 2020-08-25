@@ -13,7 +13,8 @@ const paths = {
 function compile() {
   const filterBinFiles = gFilter(
     `${tsProject.config.compilerOptions.outDir}/knapsack-pro-jest.js`,
-    { restore: true },
+    // eslint-disable-next-line comma-dangle
+    { restore: true }
   );
 
   return (
