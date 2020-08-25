@@ -19,7 +19,7 @@ import { JestCLI } from './jest-cli';
 const jestCLIOptions = JestCLI.argvToOptions();
 const knapsackProLogger = new KnapsackProLogger();
 knapsackProLogger.debug(
-  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`,
+  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`
 );
 
 EnvConfig.loadEnvironmentVariables();
@@ -29,18 +29,16 @@ const allTestFiles: TestFile[] = TestFilesFinder.allTestFiles();
 const knapsackPro = new KnapsackProCore(
   clientName,
   clientVersion,
-  allTestFiles,
+  allTestFiles
 );
 
 const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   const testFilePaths: string[] = queueTestFiles.map(
-    (testFile: TestFile) => testFile.path,
+    (testFile: TestFile) => testFile.path
   );
 
   const jestCLICoverage = EnvConfig.coverageDirectory
-    ? {
-      coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv1()}`,
-    }
+    ? { coverageDirectory: `${EnvConfig.coverageDirectory}/${uuidv1()}` }
     : {};
 
   const {
@@ -52,7 +50,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
       runTestsByPath: true,
       _: testFilePaths,
     },
-    [projectPath],
+    [projectPath]
   );
 
   const recordedTestFiles: TestFile[] = testResults.map(
@@ -76,7 +74,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
         path,
         time_execution: timeExecution,
       };
-    },
+    }
   );
 
   return {
