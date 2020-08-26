@@ -51,6 +51,9 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 
 ## Installation
 
+Please ensure you have added `jest` package in your project `package.json`.
+`@knapsack-pro/jest` uses `jest` version installed in your project.
+
 For `npm` users:
 
 ```
