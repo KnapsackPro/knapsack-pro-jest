@@ -51,6 +51,9 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
 
 ## Installation
 
+Please ensure you have added `jest` package in your project `package.json`.
+`@knapsack-pro/jest` uses `jest` version installed in your project.
+
 For `npm` users:
 
 ```
@@ -668,6 +671,8 @@ You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in devel
 ### Setup
 
 1. Setup [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) project.
+
+**Follow below steps or use `bin/setup_development` script to take care of steps 2-5.**
 
 2. Install dependencies:
 
