@@ -4,8 +4,14 @@
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v3.0.0...HEAD)
 
+**Implemented enhancements:**
+
+- Add jest \>=22.0.0 \<27.0.0 to peerDependencies  [\#21](https://github.com/KnapsackPro/knapsack-pro-jest/pull/21) ([ArturT](https://github.com/ArturT))
+
 **Merged pull requests:**
 
+- Update packages [\#20](https://github.com/KnapsackPro/knapsack-pro-jest/pull/20) ([ArturT](https://github.com/ArturT))
+- Update formatting related configs \(prettier etc\) [\#19](https://github.com/KnapsackPro/knapsack-pro-jest/pull/19) ([ArturT](https://github.com/ArturT))
 - Use @knapsack-pro/core 3.0.0 [\#18](https://github.com/KnapsackPro/knapsack-pro-jest/pull/18) ([ArturT](https://github.com/ArturT))
 - Use Node 12.18.3 LTS in development and update README requirements [\#17](https://github.com/KnapsackPro/knapsack-pro-jest/pull/17) ([ArturT](https://github.com/ArturT))
 - Bump lodash from 4.17.15 to 4.17.19 [\#16](https://github.com/KnapsackPro/knapsack-pro-jest/pull/16) ([dependabot[bot]](https://github.com/apps/dependabot))
