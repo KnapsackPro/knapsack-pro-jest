@@ -4,6 +4,10 @@ export class EnvConfig {
       process.env.KNAPSACK_PRO_TEST_SUITE_TOKEN =
         process.env.KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST;
     }
+
+    if (process.env.NODE_ENV == null) {
+      process.env.NODE_ENV = 'test';
+    }
   }
 
   public static get testFilePattern(): string {
