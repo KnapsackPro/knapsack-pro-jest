@@ -5,6 +5,10 @@ export class EnvConfig {
         process.env.KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST;
     }
 
+    // Jest defaults NODE_ENV to test,
+    // and they suggest that you can rely on this to set up Jest-specific Babel config.
+    // We should do the same for Knapsack Pro.
+    // https://github.com/KnapsackPro/knapsack-pro-jest/pull/23
     if (process.env.NODE_ENV == null) {
       process.env.NODE_ENV = 'test';
     }
