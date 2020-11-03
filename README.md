@@ -111,22 +111,33 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 8. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
 
-9. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+9. To run tests even faster with Knapsack Pro for Jest you should pass option `--runInBand` to Jest:
 
-   - [CircleCI](#circleci)
-   - [Travis CI](#travis-ci)
-   - [Buildkite.com](#buildkitecom)
-   - [Codeship.com](#codeshipcom)
-   - [Heroku CI](#heroku-ci)
-   - [Solano CI](#solano-ci)
-   - [AppVeyor](#appveyor)
-   - [GitLab CI](#gitlab-ci)
-   - [SemaphoreCI.com](#semaphorecicom)
-   - [Cirrus-CI.org](#cirrus-ciorg)
-   - [Jenkins](#jenkins)
-   - [GitHub Actions](#github-actions)
-   - [Codefresh.io](#codefreshio)
-   - [Other CI provider](#other-ci-provider)
+```
+$(npm bin)/knapsack-pro-jest --runInBand
+```
+
+`--runInBand` does run all tests serially in the current process, rather than creating a worker pool of child processes. Knapsack Pro starts Jest process for each set of tests fetched from Knapsack Pro Queue API.
+By using `--runInBand` you can save time by not starting the worker pool of child processes for each set of tests fetched from Knapsack Pro Queue API.
+
+See [example how test suite can run 2 times faster with `--runInBand`](https://github.com/KnapsackPro/knapsack-pro-jest/issues/24). You can test this option yourself to verify if it helps increase the speed of tests in case of your test suite.
+
+10. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+
+- [CircleCI](#circleci)
+- [Travis CI](#travis-ci)
+- [Buildkite.com](#buildkitecom)
+- [Codeship.com](#codeshipcom)
+- [Heroku CI](#heroku-ci)
+- [Solano CI](#solano-ci)
+- [AppVeyor](#appveyor)
+- [GitLab CI](#gitlab-ci)
+- [SemaphoreCI.com](#semaphorecicom)
+- [Cirrus-CI.org](#cirrus-ciorg)
+- [Jenkins](#jenkins)
+- [GitHub Actions](#github-actions)
+- [Codefresh.io](#codefreshio)
+- [Other CI provider](#other-ci-provider)
 
 ### CI steps
 
