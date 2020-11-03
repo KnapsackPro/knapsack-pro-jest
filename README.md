@@ -126,20 +126,20 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 10. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
-- [CircleCI](#circleci)
-- [Travis CI](#travis-ci)
-- [Buildkite.com](#buildkitecom)
-- [Codeship.com](#codeshipcom)
-- [Heroku CI](#heroku-ci)
-- [Solano CI](#solano-ci)
-- [AppVeyor](#appveyor)
-- [GitLab CI](#gitlab-ci)
-- [SemaphoreCI.com](#semaphorecicom)
-- [Cirrus-CI.org](#cirrus-ciorg)
-- [Jenkins](#jenkins)
-- [GitHub Actions](#github-actions)
-- [Codefresh.io](#codefreshio)
-- [Other CI provider](#other-ci-provider)
+    - [CircleCI](#circleci)
+    - [Travis CI](#travis-ci)
+    - [Buildkite.com](#buildkitecom)
+    - [Codeship.com](#codeshipcom)
+    - [Heroku CI](#heroku-ci)
+    - [Solano CI](#solano-ci)
+    - [AppVeyor](#appveyor)
+    - [GitLab CI](#gitlab-ci)
+    - [SemaphoreCI.com](#semaphorecicom)
+    - [Cirrus-CI.org](#cirrus-ciorg)
+    - [Jenkins](#jenkins)
+    - [GitHub Actions](#github-actions)
+    - [Codefresh.io](#codefreshio)
+    - [Other CI provider](#other-ci-provider)
 
 ### CI steps
 
