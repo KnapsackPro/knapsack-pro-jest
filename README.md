@@ -111,7 +111,7 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 8. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
 
-9. To run tests faster you should pass option `--runInBand` to Knapsack Pro that will pass it down to Jest:
+9. To run tests faster you should pass option [`--runInBand`](https://jestjs.io/docs/en/cli#--runinband) to Knapsack Pro that will pass it down to Jest:
 
    ```
    $(npm bin)/knapsack-pro-jest --runInBand
