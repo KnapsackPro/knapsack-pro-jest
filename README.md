@@ -113,14 +113,14 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 9. To run tests even faster with Knapsack Pro for Jest you should pass option `--runInBand` to Jest:
 
-```
-$(npm bin)/knapsack-pro-jest --runInBand
-```
+   ```
+   $(npm bin)/knapsack-pro-jest --runInBand
+   ```
 
-`--runInBand` does run all tests serially in the current process, rather than creating a worker pool of child processes. Knapsack Pro starts Jest process for each set of tests fetched from Knapsack Pro Queue API.
-By using `--runInBand` you can save time by not starting the worker pool of child processes for each set of tests fetched from Knapsack Pro Queue API.
+   `--runInBand` does run all tests serially in the current process, rather than creating a worker pool of child processes. Knapsack Pro starts Jest process for each set of tests fetched from Knapsack Pro Queue API.
+   By using `--runInBand` you can save time by not starting the worker pool of child processes for each set of tests fetched from Knapsack Pro Queue API.
 
-See [example how test suite can run 2 times faster with `--runInBand`](https://github.com/KnapsackPro/knapsack-pro-jest/issues/24). You can test this option yourself to verify if it helps increase the speed of tests in case of your test suite.
+   See [example how test suite can run 2 times faster with `--runInBand`](https://github.com/KnapsackPro/knapsack-pro-jest/issues/24). You can test this option yourself to verify if it helps increase the speed of tests in case of your test suite.
 
 10. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
