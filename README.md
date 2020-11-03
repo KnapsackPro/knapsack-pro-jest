@@ -111,11 +111,13 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
 8. If you use `jest-junit` please check [how to generate XML report using `jest-junit` with `@knapsack-pro/jest` in Queue Mode](https://knapsackpro.com/faq/question/how-to-generate-xml-report-using-jest-junit-with-knapsack-pro-jest-in-queue-mode)?
 
-9. To run tests faster you should pass option `--runInBand` to Jest:
+9. To run tests faster you should pass option `--runInBand` to Knapsack Pro that will pass it down to Jest:
 
    ```
    $(npm bin)/knapsack-pro-jest --runInBand
    ```
+
+   You will see where to add the above command in your CI provider config in further steps.
 
    `--runInBand` does run all tests serially in the current process, rather than creating a worker pool of child processes. Knapsack Pro starts Jest process for each set of tests fetched from Knapsack Pro Queue API.
    By using `--runInBand` you can save time by not starting the worker pool of child processes for each set of tests fetched from Knapsack Pro Queue API.
