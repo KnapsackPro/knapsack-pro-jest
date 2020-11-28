@@ -52,7 +52,7 @@
     "knapsack-pro-jest": "lib/knapsack-pro-jest.js"
   },
   "dependencies": {
-    "@knapsack-pro/core": "^3.0.1",
+    "@knapsack-pro/core": "^3.1.0",
     "glob": "^7.1.6",
     "minimatch": "^3.0.4",
     "minimist": "^1.2.5",
