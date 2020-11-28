@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.0.0...HEAD)
+
+**Implemented enhancements:**
+
+- Update @knapsack-pro/core 3.1.0 - Add support for an attempt to connect to existing Queue on API side to reduce slow requests number [\#26](https://github.com/KnapsackPro/knapsack-pro-jest/pull/26) ([ArturT](https://github.com/ArturT))
+
+**Closed issues:**
+
+- Recommend runInBand [\#24](https://github.com/KnapsackPro/knapsack-pro-jest/issues/24)
+
+**Merged pull requests:**
+
+- Recommend option --runInBand to run tests faster \(update installation steps\) [\#25](https://github.com/KnapsackPro/knapsack-pro-jest/pull/25) ([ArturT](https://github.com/ArturT))
+
 ## [v5.0.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.0.0) (2020-10-30)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v4.0.1...v5.0.0)
