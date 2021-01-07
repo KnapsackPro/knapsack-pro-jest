@@ -1,5 +1,16 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.1.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump ini from 1.3.5 to 1.3.8 [\#30](https://github.com/KnapsackPro/knapsack-pro-jest/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update @knapsack-pro/core to 3.1.1 [\#29](https://github.com/KnapsackPro/knapsack-pro-jest/pull/29) ([ArturT](https://github.com/ArturT))
+- Bump node-notifier from 8.0.0 to 8.0.1 [\#28](https://github.com/KnapsackPro/knapsack-pro-jest/pull/28) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ini from 1.3.5 to 1.3.7 [\#27](https://github.com/KnapsackPro/knapsack-pro-jest/pull/27) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v5.1.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.1.0) (2020-11-28)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.0.0...v5.1.0)
