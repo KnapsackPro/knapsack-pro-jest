@@ -629,7 +629,7 @@ KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=0 $(npm bin)/knapsack-pr
 KNAPSACK_PRO_CI_NODE_TOTAL=2 KNAPSACK_PRO_CI_NODE_INDEX=1 $(npm bin)/knapsack-pro-jest
 ```
 
-Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment.
+Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as global environment variable.
 
 ## FAQ
 
