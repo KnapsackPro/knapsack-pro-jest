@@ -645,29 +645,15 @@ This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsa
 
 ### How to run tests only from specific directory?
 
-You can set `KNAPSACK_PRO_TEST_FILE_PATTERN="{**/__tests__/**/*.js?(x),**/?(*.)(spec|test).js?(x)}"` and change pattern to match your directory with test files. You can use [glob](https://github.com/isaacs/node-glob) pattern.
-
-`@knapsack-pro/jest` by default rejects tests inside of `node_modules` directory. If your pattern set by `KNAPSACK_PRO_TEST_FILE_PATTERN` matches test file paths within `node_modules` then those test file paths won't be run.
-
-If you want to use a few patterns you can do it as shown above `KNAPSACK_PRO_TEST_FILE_PATTERN="{pattern_1,pattern_2}"`.
-
-If you want to use single pattern then you can do `KNAPSACK_PRO_TEST_FILE_PATTERN="__tests__/**/*.test.js"`.
+https://knapsackpro.com/faq/question/how-to-run-tests-only-from-specific-directory-in-jest
 
 ### How to exclude tests to ignore them from running?
 
-You can set `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` which define a [glob](https://github.com/isaacs/node-glob) pattern to exclude tests similar to Jest [`testPathIgnorePatterns`](https://jestjs.io/docs/en/configuration.html#testpathignorepatterns-array-string) parameter. Note `testPathIgnorePatterns` uses regexp pattern while `KNAPSACK_PRO_TEST_FILE_EXCLUDE_PATTERN` uses [glob](https://github.com/isaacs/node-glob) pattern.
+https://knapsackpro.com/faq/question/how-to-exclude-tests-to-ignore-them-from-running-in-jest
 
 ### How to pass command line options?
 
-**UP TO DATE ANSWER:** https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
-
-You can pass command line options to Jest by just passing them to `@knapsack-pro/jest`. See example:
-
-```
-$(npm bin)/knapsack-pro-jest --debug
-```
-
-You can find [list of Jest CLI options here](https://jestjs.io/docs/en/cli#options).
+https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
 
 ## Development
 
