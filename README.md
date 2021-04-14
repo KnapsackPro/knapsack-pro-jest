@@ -34,10 +34,6 @@ Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic 
     - [Codefresh.io](#codefreshio)
     - [Other CI provider](#other-ci-provider)
 - [FAQ](#faq)
-  - [Knapsack Pro Core features FAQ](#knapsack-pro-core-features-faq)
-  - [How to run tests only from specific directory?](#how-to-run-tests-only-from-specific-directory)
-  - [How to exclude tests to ignore them from running?](#how-to-exclude-tests-to-ignore-them-from-running)
-  - [How to pass command line options?](#how-to-pass-command-line-options)
 - [Development](#development)
   - [Requirements](#requirements)
   - [Dependencies](#dependencies)
@@ -633,27 +629,9 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as glob
 
 ## FAQ
 
-:heavy_exclamation_mark: **NEW:** Up to date [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
+- [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
 
-**OLD:** This README also contains FAQ questions but we keep adding new info only to our new FAQ page mentioned above.
-
-We keep this old FAQ in README to not break old links spread across the web.
-
-### Knapsack Pro Core features FAQ
-
-This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsack-pro/core`](https://github.com/KnapsackPro/knapsack-pro-core-js#table-of-contents) to learn more about core features available to you.
-
-### How to run tests only from specific directory?
-
-https://knapsackpro.com/faq/question/how-to-run-tests-only-from-specific-directory-in-jest
-
-### How to exclude tests to ignore them from running?
-
-https://knapsackpro.com/faq/question/how-to-exclude-tests-to-ignore-them-from-running-in-jest
-
-### How to pass command line options?
-
-https://knapsackpro.com/faq/question/how-to-pass-command-line-options-to-jest
+- This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsack-pro/core`](https://github.com/KnapsackPro/knapsack-pro-core-js#table-of-contents) to learn more about core features available to you.
 
 ## Development
 
