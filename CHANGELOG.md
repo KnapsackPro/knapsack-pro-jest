@@ -1,5 +1,23 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.1.1...HEAD)
+
+**Implemented enhancements:**
+
+- Use 0 seconds as a default test file time execution [\#36](https://github.com/KnapsackPro/knapsack-pro-jest/pull/36) ([ArturT](https://github.com/ArturT))
+
+**Closed issues:**
+
+- Force exit doesn't work [\#31](https://github.com/KnapsackPro/knapsack-pro-jest/issues/31)
+
+**Merged pull requests:**
+
+- Remove FAQ questions from readme [\#35](https://github.com/KnapsackPro/knapsack-pro-jest/pull/35) ([ArturT](https://github.com/ArturT))
+- Add links to FAQ answers [\#34](https://github.com/KnapsackPro/knapsack-pro-jest/pull/34) ([ArturT](https://github.com/ArturT))
+- Bump y18n from 3.2.1 to 3.2.2 [\#33](https://github.com/KnapsackPro/knapsack-pro-jest/pull/33) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v5.1.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.1.1) (2021-01-07)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.1.0...v5.1.1)
