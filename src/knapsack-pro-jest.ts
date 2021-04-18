@@ -66,9 +66,8 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
           ? testFilePath.replace(`${projectPath}\\`, '').replace(/\\/g, '/')
           : testFilePath.replace(`${projectPath}/`, '');
       const timeExecutionMiliseconds = end - start;
-      // 0.1s default time when not recorded timing
       const timeExecution =
-        timeExecutionMiliseconds > 0 ? timeExecutionMiliseconds / 1000 : 0.1;
+        timeExecutionMiliseconds > 0 ? timeExecutionMiliseconds / 1000 : 0.0;
 
       return {
         path,
