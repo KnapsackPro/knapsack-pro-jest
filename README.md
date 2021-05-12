@@ -120,7 +120,22 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
    See [example how test suite can run 2 times faster with `--runInBand`](https://github.com/KnapsackPro/knapsack-pro-jest/issues/24). You can test this option yourself to verify if it helps increase the speed of tests in case of your test suite.
 
-10. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
+10. If your code is written in Typescript and you run specs with ts-jest, consider moving typechecking and diagnostics to a separate CI step and disable typechecking on Jest runs.
+    This setting prevents ts-jest from running `tsc` on your code for every Knapsack grouping, repeating effort. On a larger codebase, it could prevent increasing your execution time by more than 50%.
+
+
+    ```json
+    /* jest.config.js
+
+    globals: {
+      'ts-jest': {
+        diagnostics: false,
+        isolatedModules: true,
+      }
+    }
+    ```
+
+11. Please select your CI provider and follow instructions to run tests with `@knapsack-pro/jest`.
 
     - [CircleCI](#circleci)
     - [Travis CI](#travis-ci)
