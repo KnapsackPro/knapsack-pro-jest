@@ -123,9 +123,8 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 10. If your code is written in TypeScript and you run specs with ts-jest, consider moving typechecking and diagnostics to a separate CI step and disable typechecking on Jest runs.
     This setting prevents ts-jest from running `tsc` on your code for every Knapsack grouping, repeating effort. On a larger codebase, it could prevent increasing your execution time by more than 50%.
 
-
     ```json
-    /* jest.config.js
+    /* jest.config.js */
 
     globals: {
       'ts-jest': {
