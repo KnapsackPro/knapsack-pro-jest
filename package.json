@@ -31,10 +31,11 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp build",
-    "lint": "npm run lint:js && npm run lint:ts && npm run lint:format",
-    "lint:js": "eslint .",
-    "lint:ts": "tslint --project . --format stylish",
-    "lint:format": "prettier --check .",
+    "lint": "npm run eslint:check && npm run prettier:check",
+    "eslint:check": "eslint . --ext .ts",
+    "eslint:format": "eslint . --ext .ts --fix",
+    "prettier:check": "prettier --check .",
+    "prettier:format": "prettier --config .prettierrc.json 'src/**/*.ts' --write",
     "doctoc": "doctoc --title \"## Table of Contents\" README.md"
   },
   "files": [
