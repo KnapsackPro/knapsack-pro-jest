@@ -653,7 +653,7 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as glob
 
 You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in development.
 
-- `>= Node 12.18.3 LTS`
+- `>= Node 16.15.1 LTS`
 
 ### Dependencies
 
