@@ -16,11 +16,12 @@ export class TestFilesFinder {
         }
         return true;
       })
-      .filter((testFilePath: string) => {
-        // ignore test file paths inside node_modules because it's default Jest behavior
-        // https://jestjs.io/docs/en/22.2/configuration#testpathignorepatterns-array-string
-        return !testFilePath.match(/node_modules/);
-      })
+      .filter(
+        (testFilePath: string) =>
+          // ignore test file paths inside node_modules because it's default Jest behavior
+          // https://jestjs.io/docs/en/22.2/configuration#testpathignorepatterns-array-string
+          !testFilePath.match(/node_modules/),
+      )
       .map((testFilePath: string) => ({ path: testFilePath }));
 
     if (testFiles.length === 0) {

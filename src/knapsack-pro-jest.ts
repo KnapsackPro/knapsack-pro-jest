@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-const { name: clientName, version: clientVersion } = require('../package.json');
-
-const jest = require('jest');
-const { v4: uuidv4 } = require('uuid');
-
 import {
   KnapsackProCore,
   KnapsackProLogger,
@@ -15,6 +10,14 @@ import {
 import { EnvConfig } from './env-config';
 import { TestFilesFinder } from './test-files-finder';
 import { JestCLI } from './jest-cli';
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const jest = require('jest');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { v4: uuidv4 } = require('uuid');
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { name: clientName, version: clientVersion } = require('../package.json');
 
 const jestCLIOptions = JestCLI.argvToOptions();
 const knapsackProLogger = new KnapsackProLogger();
@@ -83,6 +86,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
 };
 
 // we do nothing when error so pass noop
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, @typescript-eslint/no-empty-function
 const onError: onQueueFailureType = (error: any) => {};
 
 knapsackPro.runQueueMode(onSuccess, onError);
