@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.2.0...HEAD)
+
+**Closed issues:**
+
+- knapsack-pro-jest not respecting "testFailureExitCode" Jest configuration option [\#43](https://github.com/KnapsackPro/knapsack-pro-jest/issues/43)
+
+**Merged pull requests:**
+
+- Add code highlighting in README [\#54](https://github.com/KnapsackPro/knapsack-pro-jest/pull/54) ([ArturT](https://github.com/ArturT))
+- Update dependencies in the package-lock.json [\#53](https://github.com/KnapsackPro/knapsack-pro-jest/pull/53) ([ArturT](https://github.com/ArturT))
+- Bump copy-props from 2.0.4 to 2.0.5 [\#52](https://github.com/KnapsackPro/knapsack-pro-jest/pull/52) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Update dependencies and development ESLint config [\#51](https://github.com/KnapsackPro/knapsack-pro-jest/pull/51) ([ArturT](https://github.com/ArturT))
+- Update documentation for users of ts-jest [\#39](https://github.com/KnapsackPro/knapsack-pro-jest/pull/39) ([geoffharcourt](https://github.com/geoffharcourt))
+
 ## [v5.2.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.2.0) (2021-04-18)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.1.1...v5.2.0)
