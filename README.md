@@ -125,11 +125,12 @@ Whenever you see `npm` in below steps you can use `yarn` there as well.
 
     ```json
     /* jest.config.js */
-
-    globals: {
-      'ts-jest': {
-        diagnostics: false,
-        isolatedModules: true,
+    {
+      "globals": {
+        "ts-jest": {
+          "diagnostics": false,
+          "isolatedModules": true
+        }
       }
     }
     ```
