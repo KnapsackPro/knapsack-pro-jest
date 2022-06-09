@@ -25,7 +25,7 @@ jobs:
 
       - run: cd ~/knapsack-pro-core-js && npm install
       - run: cd ~/knapsack-pro-core-js && npm run build
-      - run: cd ~/knapsack-pro-core-js && sudo npm link
+      - run: cd ~/knapsack-pro-core-js && npm link
 
       - save_cache:
           name: Saving Cache of @knapsack-pro/core
