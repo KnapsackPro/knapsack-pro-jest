@@ -1,10 +1,5 @@
 #!/usr/bin/env node
 
-const { name: clientName, version: clientVersion } = require('../package.json');
-
-const jest = require('jest');
-const { v4: uuidv4 } = require('uuid');
-
 import {
   KnapsackProCore,
   KnapsackProLogger,
@@ -16,10 +11,18 @@ import { EnvConfig } from './env-config';
 import { TestFilesFinder } from './test-files-finder';
 import { JestCLI } from './jest-cli';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const jest = require('jest');
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { v4: uuidv4 } = require('uuid');
+
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { name: clientName, version: clientVersion } = require('../package.json');
+
 const jestCLIOptions = JestCLI.argvToOptions();
 const knapsackProLogger = new KnapsackProLogger();
 knapsackProLogger.debug(
-  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`
+  `Jest CLI options:\n${KnapsackProLogger.objectInspect(jestCLIOptions)}`,
 );
 
 EnvConfig.loadEnvironmentVariables();
@@ -29,12 +32,12 @@ const allTestFiles: TestFile[] = TestFilesFinder.allTestFiles();
 const knapsackPro = new KnapsackProCore(
   clientName,
   clientVersion,
-  allTestFiles
+  allTestFiles,
 );
 
 const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
   const testFilePaths: string[] = queueTestFiles.map(
-    (testFile: TestFile) => testFile.path
+    (testFile: TestFile) => testFile.path,
   );
 
   const jestCLICoverage = EnvConfig.coverageDirectory
@@ -50,7 +53,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
       runTestsByPath: true,
       _: testFilePaths,
     },
-    [projectPath]
+    [projectPath],
   );
 
   const recordedTestFiles: TestFile[] = testResults.map(
@@ -73,7 +76,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
         path,
         time_execution: timeExecution,
       };
-    }
+    },
   );
 
   return {
@@ -83,6 +86,7 @@ const onSuccess: onQueueSuccessType = async (queueTestFiles: TestFile[]) => {
 };
 
 // we do nothing when error so pass noop
+// eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, @typescript-eslint/no-empty-function
 const onError: onQueueFailureType = (error: any) => {};
 
 knapsackPro.runQueueMode(onSuccess, onError);

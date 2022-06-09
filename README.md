@@ -653,7 +653,7 @@ Please remember to set up API token `KNAPSACK_PRO_TEST_SUITE_TOKEN_JEST` as glob
 
 You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in development.
 
-- `>= Node 12.18.3 LTS`
+- `>= Node 16.15.1 LTS`
 
 ### Dependencies
 
@@ -697,14 +697,13 @@ You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in devel
 
        - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
        - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-       - [TypeScript TSLint Plugin](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-tslint-plugin)
        - [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
 
      - Go to `File > Preferences > Settings > Text Editor > Formatting`
 
        Turn on `Format On Save` checkbox.
 
-   From now on every change in code base will be automatically formatted by [Prettier](https://prettier.io/). [ESLint](https://eslint.org/) and [TSLint](https://palantir.github.io/tslint/) errors will be also automatically fixed on every file save.
+   From now on, every change in code base will be automatically formatted by [Prettier](https://prettier.io/). [ESLint](https://eslint.org/) shows errors and warnings in VSCode.
 
 7. Write some code.
 
