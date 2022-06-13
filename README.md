@@ -805,4 +805,4 @@ If your feature requires code change in [@knapsack-pro/core](https://github.com/
 To test `@knapsack-pro/jest` against real test suite we use:
 
 - [jest-example-test-suite](https://github.com/KnapsackPro/jest-example-test-suite) project.
-- [react](https://github.com/KnapsackPro/react)
+- (deprecated) [react](https://github.com/KnapsackPro/react)
