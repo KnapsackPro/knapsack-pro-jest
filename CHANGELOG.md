@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.3.0...HEAD)
+
+**Closed issues:**
+
+- Jest 28 Breaks Npm Install [\#50](https://github.com/KnapsackPro/knapsack-pro-jest/issues/50)
+
+**Merged pull requests:**
+
+- Update @knapsack-pro/core to 3.3.1 [\#60](https://github.com/KnapsackPro/knapsack-pro-jest/pull/60) ([ArturT](https://github.com/ArturT))
+- Update @knapsack-pro/core to 3.3.0 [\#59](https://github.com/KnapsackPro/knapsack-pro-jest/pull/59) ([ArturT](https://github.com/ArturT))
+- Bump json5 from 1.0.1 to 1.0.2 [\#57](https://github.com/KnapsackPro/knapsack-pro-jest/pull/57) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Point installation to docs on knapsackspro.com [\#56](https://github.com/KnapsackPro/knapsack-pro-jest/pull/56) ([3v0k4](https://github.com/3v0k4))
+- Bump decode-uri-component from 0.2.0 to 0.2.2 [\#55](https://github.com/KnapsackPro/knapsack-pro-jest/pull/55) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v5.3.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.3.0) (2022-06-09)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.2.0...v5.3.0)
