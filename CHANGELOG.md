@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+## [v5.4.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.4.1) (2023-01-31)
 
-[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.4.0...HEAD)
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.4.0...v5.4.1)
 
 **Implemented enhancements:**
 
