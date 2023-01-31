@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.4.0...HEAD)
+
+**Implemented enhancements:**
+
+- Support KNAPSACK\_PRO\_TEST\_FILE\_LIST\_SOURCE\_FILE to specify the set of files to run [\#58](https://github.com/KnapsackPro/knapsack-pro-jest/issues/58)
+
+**Fixed bugs:**
+
+- Search for test files on the disk only if needed by the `@knapsack-pro/core` [\#61](https://github.com/KnapsackPro/knapsack-pro-jest/pull/61) ([ArturT](https://github.com/ArturT))
+
 ## [v5.4.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.4.0) (2023-01-30)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.3.0...v5.4.0)
