@@ -1,46 +1,47 @@
 # @knapsack-pro/jest
 
-[![CircleCI](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest.svg?style=svg)](https://circleci.com/gh/KnapsackPro/knapsack-pro-jest)
+<p align="center">
+  <a href="https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=knapsack-pro-jest&utm_content=hero_logo">
+    <img alt="Knapsack Pro" src="./.github/assets/knapsack.png" width="300" height="300" style="max-width: 100%;" />
+  </a>
+</p>
 
-`@knapsack-pro/jest` runs your tests with [Jest](https://jestjs.io) test runner and does dynamic tests allocation across parallel CI nodes using [KnapsackPro.com](https://knapsackpro.com?utm_source=github&utm_medium=readme&utm_campaign=%40knapsack-pro%2Fjest&utm_content=sign_up) Queue Mode to provide the fastest CI build time (optimal test suite timing).
+<h3 align="center">Speed up your tests</h3>
+<p align="center">Run your 1-hour test suite in 2 minutes with optimal parallelisation on your existing CI infrastructure</p>
 
-Learn about Knapsack Pro Queue Mode in the video [how to run tests with dynamic test suite split](https://youtu.be/hUEB1XDKEFY) and learn what CI problems can be solved thanks to it.
+---
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<div align="center">
+  <a href="https://circleci.com/gh/KnapsackPro/knapsack-pro-jest">
+    <img alt="Circle CI" src="https://circleci.com/gh/KnapsackPro/knapsack-pro-jest.svg?style=svg" />
+  </a>
+</div>
 
-## Table of Contents
+<br />
+<br />
 
-- [Installation](#installation)
-- [FAQ](#faq)
-- [Development](#development)
-  - [Requirements](#requirements)
-  - [Dependencies](#dependencies)
-  - [Setup](#setup)
-  - [Publishing](#publishing)
-  - [Testing](#testing)
-    - [CI](#ci)
-    - [Example Jest test suite](#example-jest-test-suite)
+Knapsack Pro wraps [Jest](https://jestjs.io) and works with your existing CI infrastructure to parallelize tests optimally:
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+- Dynamically splits your tests based on up-to-date test execution data
+- Is designed from the ground up for CI and supports all of them
+- Tracks your CI builds to detect bottlenecks
+- Does not have access to your source code and collects minimal test data
+- Enables you to export historical metrics about your CI builds
+- Replaces local dependencies like Redis with an API and runs your tests regardless of network problems
 
 ## Installation
 
 See the [docs](https://docs.knapsackpro.com/jest/guide/) to get started.
 
-## FAQ
-
-- [FAQ for Knapsack Pro Jest can be found here](https://knapsackpro.com/faq/knapsack_pro_client/knapsack_pro_jest).
-
-- This project depends on `@knapsack-pro/core`. Please check the [FAQ for `@knapsack-pro/core`](https://github.com/KnapsackPro/knapsack-pro-core-js#table-of-contents) to learn more about core features available to you.
-
-## Development
+## Contributing
 
 ### Requirements
 
-You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in development.
+```
+>= Node 18.13.0 LTS
+```
 
-- `>= Node 18.13.0 LTS`
+You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node versions in development.
 
 ### Dependencies
 
@@ -48,35 +49,35 @@ You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in devel
 
 ### Setup
 
-1. Setup [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) project.
+1. Setup the [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) project.
 
-**Follow below steps or use `bin/setup_development` script to take care of steps 2-5.**
+   **Follow the steps below or use the `bin/setup_development` script to take care of steps 2-5.**
 
-2. Install dependencies:
+1. Install the dependencies:
 
-   ```
-   $ npm install
-   ```
-
-3. In order to use local version of `@knapsack-pro/core` run:
-
-   ```
-   $ npm link @knapsack-pro/core
+   ```bash
+   npm install
    ```
 
-4. Compile TypeScript code to `lib` directory by running:
+1. In order to use the local version of `@knapsack-pro/core` run:
 
-   ```
-   $ npm start
-   ```
-
-5. Register `@knapsack-pro/jest` package globally in your local system. This way we will be able to develop other npm packages dependent on it:
-
-   ```
-   $ npm link
+   ```bash
+   npm link @knapsack-pro/core
    ```
 
-6. Set up your IDE:
+1. Compile the TypeScript code to the `lib` directory by running:
+
+   ```bash
+   npm start
+   ```
+
+1. Register the `@knapsack-pro/jest` package globally in your local system. This way we will be able to develop other npm packages dependent on it:
+
+   ```bash
+   npm link
+   ```
+
+1. Set up your IDE:
 
    - Visual Studio Code
 
@@ -90,21 +91,34 @@ You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in devel
 
        Turn on `Format On Save` checkbox.
 
-   From now on, every change in code base will be automatically formatted by [Prettier](https://prettier.io/). [ESLint](https://eslint.org/) shows errors and warnings in VSCode.
+   From now on, every change in the codebase will be automatically formatted by [Prettier](https://prettier.io/). [ESLint](https://eslint.org/) shows errors and warnings in VSCode.
 
-7. Write some code.
+1. Write some code.
+
+### Testing
+
+#### CI
+
+If your feature requires code changes in [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js), please push the `@knapsack-pro/core` to GitHub first. Then you can push changes for `@knapsack-pro/jest` to ensure the CI will use the latest `@knapsack-pro/core`.
+
+#### Example Jest test suite
+
+To test `@knapsack-pro/jest` against a real test suite we use:
+
+- [jest-example-test-suite](https://github.com/KnapsackPro/jest-example-test-suite)
+- (deprecated) [react](https://github.com/KnapsackPro/react)
 
 ### Publishing
 
-1. Sign in to npm registry with command:
+1. Sign in to the npm registry with:
 
-   ```
-   $ npm adduser
+   ```bash
+   npm adduser
    ```
 
-2. Ensure you have the latest version of `@knapsack-pro/core` in `package.json`:
+1. Ensure you have the latest version of `@knapsack-pro/core` in `package.json`:
 
-   ```
+   ```bash
    {
      "dependencies": {
        "@knapsack-pro/core": "^x.x.x"
@@ -112,83 +126,64 @@ You can use [NVM](https://github.com/nvm-sh/nvm) to manage Node version in devel
    }
    ```
 
-   Then run `npm install`. This way you will be able to test `@knapsack-pro/core` installed from npm registry instead of local one that was linked with `npm link @knapsack-pro/core`.
+   Run `npm install`. This way you will be able to test `@knapsack-pro/core` installed from npm registry instead of the local one that was linked with `npm link @knapsack-pro/core`.
 
-   Now commit updated `package.json` and `package-lock.json`.
+   Commit the updated `package.json` and `package-lock.json`:
 
+   ```bash
+   git commit -am "Update @knapsack-pro/core"
    ```
-   $ git commit -am "Update @knapsack-pro/core"
-   ```
 
-3. Before releasing a new version of package please update `CHANGELOG.md` with [github_changelog_generator](https://github.com/github-changelog-generator/github-changelog-generator):
+1. Before releasing a new version of the package, please update `CHANGELOG.md` with [`github_changelog_generator`](https://github.com/github-changelog-generator/github-changelog-generator):
 
-   ```
-   $ gem install github_changelog_generator
+   ```bash
+   gem install github_changelog_generator
 
    # generate CHANGELOG.md
-   $ github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
-   $ git commit -am "Update CHANGELOG.md"
-   $ git push origin master
+   github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
+   git commit -am "Update CHANGELOG.md"
+   git push origin master
    ```
 
-4. If you have added new files to the repository and they should be part of the released npm package then please ensure they are included in `files` array in `package.json`.
+1. If you have added new files to the repository, and they should be part of the released npm package, please ensure they are included in the `files` array in `package.json`.
 
-5. If you have changed any headers in `README.md` please refresh table of contents with:
+1. Compile the project:
 
-   ```
-   $ npm run doctoc
-   ```
+   ```bash
+   # Ensure you use local version of @knapsack-pro/core
+   npm link @knapsack-pro/core
 
-6. Compile project:
-
-   ```
-   # ensure you use local version of @knapsack-pro/core
-   $ npm link @knapsack-pro/core
-
-   $ npm run build
+   npm run build
    ```
 
-7. In order to [bump version of the package](https://docs.npmjs.com/cli/version) run below command. It will also create a version commit and tag for the release:
+1. In order to [bump the version of the package](https://docs.npmjs.com/cli/version) run the command below. It will also create a version commit and tag for the release:
 
-   ```
-   # bump patch version 0.0.x
-   $ npm version patch
+   ```bash
+   # Bump patch version 0.0.x
+   npm version patch
 
-   # bump minor version 0.x.0
-   $ npm version minor
-   ```
-
-8. Push to git repository created commit and tag:
-
-   ```
-   $ git push origin master --tags
+   # Bump minor version 0.x.0
+   npm version minor
    ```
 
-9. Now when git tag is on Github you can update `CHANGELOG.md` again.
+1. Push the commit and tag:
 
-   ```
-   $ github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
-   $ git commit -am "Update CHANGELOG.md"
-   $ git push origin master
+   ```bash
+   git push origin master --tags
    ```
 
-10. Now you can publish package to npm registry:
+1. When the git tag is on Github, you can update `CHANGELOG.md`:
 
-    ```
-    $ npm publish
-    ```
+   ```bash
+   github_changelog_generator --user KnapsackPro --project knapsack-pro-jest
+   git commit -am "Update CHANGELOG.md"
+   git push origin master
+   ```
 
-11. Update the latest available library version in `TestSuiteClientVersionChecker` for the Knapsack Pro API repository.
+1. Publish the package to the npm registry:
 
-### Testing
+   ```bash
+   npm publish
+   ```
 
-#### CI
-
-If your feature requires code change in [@knapsack-pro/core](https://github.com/KnapsackPro/knapsack-pro-core-js) then please push the `@knapsack-pro/core` to GitHub first. Then you can push changes for `@knapsack-pro/jest` to ensure the CI will use the latest `@knapsack-pro/core`.
-
-#### Example Jest test suite
-
-To test `@knapsack-pro/jest` against real test suite we use:
-
-- [jest-example-test-suite](https://github.com/KnapsackPro/jest-example-test-suite) project.
-- (deprecated) [react](https://github.com/KnapsackPro/react)
+1. Update the latest available library version in `TestSuiteClientVersionChecker` for the Knapsack Pro API repository.
