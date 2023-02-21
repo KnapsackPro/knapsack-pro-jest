@@ -59,7 +59,7 @@
     "uuid": "^8.3.2"
   },
   "peerDependencies": {
-    "jest": ">=22.0.0 <29.0.0"
+    "jest": ">=22.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.18.2",
