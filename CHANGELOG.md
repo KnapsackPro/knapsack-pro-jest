@@ -6,8 +6,7 @@
 
 **Merged pull requests:**
 
-- Update peerDependencies to allow Jest 29.x [\#65](https://github.com/KnapsackPro/knapsack-pro-jest/pull/65) ([ArturT](https://github.com/ArturT))
-- Tweak readme [\#64](https://github.com/KnapsackPro/knapsack-pro-jest/pull/64) ([3v0k4](https://github.com/3v0k4))
+- Update devDependencies: jest and ts-jest to 29.x [\#66](https://github.com/KnapsackPro/knapsack-pro-jest/pull/66) ([ArturT](https://github.com/ArturT))
 
 ## [v5.5.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.5.0) (2023-02-21)
 
@@ -16,6 +15,11 @@
 **Closed issues:**
 
 - Jest 29 support [\#63](https://github.com/KnapsackPro/knapsack-pro-jest/issues/63)
+
+**Merged pull requests:**
+
+- Update peerDependencies to allow Jest 29.x [\#65](https://github.com/KnapsackPro/knapsack-pro-jest/pull/65) ([ArturT](https://github.com/ArturT))
+- Tweak readme [\#64](https://github.com/KnapsackPro/knapsack-pro-jest/pull/64) ([3v0k4](https://github.com/3v0k4))
 
 ## [v5.4.1](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v5.4.1) (2023-01-31)
 
