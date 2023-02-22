@@ -31,7 +31,13 @@ Knapsack Pro wraps [Jest](https://jestjs.io) and works with your existing CI inf
 
 ## Installation
 
-See the [docs](https://docs.knapsackpro.com/jest/guide/) to get started.
+See the [docs](https://docs.knapsackpro.com/jest/guide/) to get started:
+
+<div align="center">
+  <a href="https://docs.knapsackpro.com/jest/guide/">
+    <img alt="Install button" src="./.github/assets/install-button.png" width="103" height="50" />
+  </a>
+</div>
 
 ## Contributing
 
