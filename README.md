@@ -192,4 +192,7 @@ To test `@knapsack-pro/jest` against a real test suite we use:
    npm publish
    ```
 
-1. Update the latest available library version in `TestSuiteClientVersionChecker` for the Knapsack Pro API repository.
+1. Update the latest available library version in:
+
+   - `TestSuiteClientVersionChecker` for the Knapsack Pro API repository.
+   - [jest-example-test-suite](https://github.com/KnapsackPro/jest-example-test-suite)
