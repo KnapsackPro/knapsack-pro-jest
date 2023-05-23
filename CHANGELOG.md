@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/KnapsackPro/knapsack-pro-jest/tree/HEAD)
+
+[Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v6.0.0...HEAD)
+
+**Merged pull requests:**
+
+- Update @knapsack-pro/core to 5.1.0 [\#70](https://github.com/KnapsackPro/knapsack-pro-jest/pull/70) ([ArturT](https://github.com/ArturT))
+
 ## [v6.0.0](https://github.com/KnapsackPro/knapsack-pro-jest/tree/v6.0.0) (2023-05-22)
 
 [Full Changelog](https://github.com/KnapsackPro/knapsack-pro-jest/compare/v5.8.0...v6.0.0)
